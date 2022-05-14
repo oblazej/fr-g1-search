@@ -1,10 +1,8 @@
 import React from 'react';
 import './App.css';
 import Navigation from './Navigation';
-import colors from "./app/colors";
 
 function App() {
-  console.log(colors)
   return (
     <div className="App">
       {/* todo: nice looking header and navbar */}

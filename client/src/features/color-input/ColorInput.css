@@ -1,0 +1,884 @@
+.Maize {
+    color: black;
+    background: #fffdea
+}
+
+.Dust {
+    color: black;
+    background: #9c9c9e
+}
+
+.Moss {
+    color: white;
+    background: #7e7745
+}
+
+.Goldenrod {
+    color: black;
+    background: #bea55d
+}
+
+.Amber {
+    color: black;
+    background: #c18e1b
+}
+
+.Honey {
+    color: black;
+    background: #d1b300
+}
+
+.Lemon {
+    color: black;
+    background: #ffe63b
+}
+
+.Yellow {
+    color: black;
+    background: #f9e255
+}
+
+.Grapefruit {
+    color: black;
+    background: #f7ff6f
+}
+
+.Banana {
+    color: black;
+    background: #ffec80
+}
+
+.Sanddollar {
+    color: black;
+    background: #ebe7ae
+}
+
+.Flaxen {
+    color: black;
+    background: #fde9ae
+}
+
+.Grey {
+    color: white;
+    background: #808080
+}
+
+.Ivory {
+    color: black;
+    background: #ffd297
+}
+
+.Buttercup {
+    color: black;
+    background: #f6bf6b
+}
+
+.Gold {
+    color: black;
+    background: #e8af49
+}
+
+.Metals {
+    color: black;
+    background: #d1b046
+}
+
+.Marigold {
+    color: black;
+    background: #ffb43b
+}
+
+.Sunshine {
+    color: black;
+    background: #fa912b
+}
+
+.Saffron {
+    color: black;
+    background: #ff8400
+}
+
+.Sunset {
+    color: black;
+    background: #ffa248
+}
+
+.Peach {
+    color: black;
+    background: #ffb576
+}
+
+.Cantaloupe {
+    color: black;
+    background: #ff984f
+}
+
+.Smoke {
+    color: black;
+    background: #9494a9
+}
+
+.Orange {
+    color: white;
+    background: #d5602b
+}
+
+.Bronze {
+    color: white;
+    background: #b2560d
+}
+
+.Terracotta {
+    color: white;
+    background: #b23b07
+}
+
+.Carrot {
+    color: black;
+    background: #ff5500
+}
+
+.Fire {
+    color: white;
+    background: #ef5c23
+}
+
+.Pumpkin {
+    color: black;
+    background: #ff6840
+}
+
+.Tangerine {
+    color: black;
+    background: #ff7360
+}
+
+.Cinnamon {
+    color: white;
+    background: #c05a39
+}
+
+.Caramel {
+    color: white;
+    background: #c67047
+}
+
+.Sand {
+    color: white;
+    background: #b27749
+}
+
+.Gloom {
+    color: white;
+    background: #535264
+}
+
+.Tan {
+    color: black;
+    background: #c49a70
+}
+
+.Beige {
+    color: black;
+    background: #cabba2
+}
+
+.Stone {
+    color: white;
+    background: #827a64
+}
+
+.Taupe {
+    color: white;
+    background: #6d665a
+}
+
+.Slate {
+    color: white;
+    background: #564d48
+}
+
+.Driftwood {
+    color: white;
+    background: #766359
+}
+
+.Latte {
+    color: white;
+    background: #977b6c
+}
+
+.Dirt {
+    color: white;
+    background: #76483f
+}
+
+.Clay {
+    color: white;
+    background: #603f3d
+}
+
+.Sable {
+    color: white;
+    background: #57372c
+}
+
+.Lead {
+    color: white;
+    background: #413c3f
+}
+
+.Umber {
+    color: white;
+    background: #2f1e1a
+}
+
+.Soil {
+    color: white;
+    background: #5a4534
+}
+
+.Hickory {
+    color: white;
+    background: #725639
+}
+
+.Tarnish {
+    color: white;
+    background: #855c32
+}
+
+.Ginger {
+    color: white;
+    background: #90532b
+}
+
+.Brown {
+    color: white;
+    background: #8e5b3f
+}
+
+.Chocolate {
+    color: white;
+    background: #563012
+}
+
+.Auburn {
+    color: white;
+    background: #7b3c1d
+}
+
+.Copper {
+    color: white;
+    background: #a44b28
+}
+
+.Rust {
+    color: white;
+    background: #8b3220
+}
+
+.Shale {
+    color: white;
+    background: #4d4850
+}
+
+.Tomato {
+    color: white;
+    background: #ba311c
+}
+
+.Vermilion {
+    color: white;
+    background: #e22d17
+}
+
+.Ruby {
+    color: white;
+    background: #cd000e
+}
+
+.Cherry {
+    color: white;
+    background: #aa0024
+}
+
+.Crimson {
+    color: white;
+    background: #850012
+}
+
+.Garnet {
+    color: white;
+    background: #5b0f14
+}
+
+.Sanguine {
+    color: white;
+    background: #2e0002
+}
+
+.Blood {
+    color: white;
+    background: #451717
+}
+
+.Maroon {
+    color: white;
+    background: #652127
+}
+
+.Berry {
+    color: white;
+    background: #8b272c
+}
+
+.Flint {
+    color: white;
+    background: #626268
+}
+
+.Red {
+    color: white;
+    background: #c1272d
+}
+
+.Strawberry {
+    color: white;
+    background: #de3235
+}
+
+.Cerise {
+    color: white;
+    background: #a22929
+}
+
+.Carmine {
+    color: white;
+    background: #b13a3a
+}
+
+.Brick {
+    color: white;
+    background: #9a534d
+}
+
+.Coral {
+    color: black;
+    background: #cc6f6f
+}
+
+.Blush {
+    color: black;
+    background: #ffa2a2
+}
+
+.Cottoncandy {
+    color: black;
+    background: #eb7997
+}
+
+.Watermelon {
+    color: black;
+    background: #db518d
+}
+
+.Magenta {
+    color: black;
+    background: #e934aa
+}
+
+.Charcoal {
+    color: white;
+    background: #545454
+}
+
+.Fuchsia {
+    color: white;
+    background: #ec0089
+}
+
+.Raspberry {
+    color: white;
+    background: #8a0249
+}
+
+.Wine {
+    color: white;
+    background: #4d0f28
+}
+
+.Mauve {
+    color: white;
+    background: #9c4875
+}
+
+.Pink {
+    color: black;
+    background: #e77fbf
+}
+
+.Bubblegum {
+    color: black;
+    background: #eaa9ff
+}
+
+.Rose {
+    color: black;
+    background: #ffd6f6
+}
+
+.Pearl {
+    color: black;
+    background: #fbe9f8
+}
+
+.Coal {
+    color: white;
+    background: #4b4946
+}
+
+.Oilslick {
+    color: white;
+    background: #342b25
+}
+
+.Cream {
+    color: black;
+    background: #ffefdc
+}
+
+.Black {
+    color: white;
+    background: #333333
+}
+
+.Obsidian {
+    color: white;
+    background: #1d2224
+}
+
+.Eldritch {
+    color: white;
+    background: #252a25
+}
+
+.Midnight {
+    color: white;
+    background: #252735
+}
+
+.Shadow {
+    color: white;
+    background: #3a2e44
+}
+
+.Blackberry {
+    color: white;
+    background: #4b294f
+}
+
+.Mulberry {
+    color: white;
+    background: #6e235d
+}
+
+.Plum {
+    color: white;
+    background: #853390
+}
+
+.Wisteria {
+    color: white;
+    background: #724e7b
+}
+
+.Thistle {
+    color: black;
+    background: #8f7c8b
+}
+
+.Antique {
+    color: black;
+    background: #d8d6cd
+}
+
+.Fog {
+    color: black;
+    background: #a593b0
+}
+
+.Mist {
+    color: black;
+    background: #e1ceff
+}
+
+.Lavender {
+    color: black;
+    background: #cca4e0
+}
+
+.Heather {
+    color: black;
+    background: #9777bd
+}
+
+.Purple {
+    color: white;
+    background: #a261cf
+}
+
+.Orchid {
+    color: black;
+    background: #d950ff
+}
+
+.Amethyst {
+    color: white;
+    background: #993bd0
+}
+
+.Nightshade {
+    color: white;
+    background: #782eb2
+}
+
+.Violet {
+    color: white;
+    background: #643f9c
+}
+
+.Grape {
+    color: white;
+    background: #570fc0
+}
+
+.White {
+    color: black;
+    background: #ffffff
+}
+
+.Royal {
+    color: white;
+    background: #4d2c89
+}
+
+.Eggplant {
+    color: white;
+    background: #332b65
+}
+
+.Iris {
+    color: white;
+    background: #535195
+}
+
+.Storm {
+    color: black;
+    background: #757adb
+}
+
+.Twilight {
+    color: white;
+    background: #474aa0
+}
+
+.Indigo {
+    color: white;
+    background: #2d237a
+}
+
+.Sapphire {
+    color: white;
+    background: #0d095b
+}
+
+.Navy {
+    color: white;
+    background: #212b5f
+}
+
+.Cobalt {
+    color: white;
+    background: #003484
+}
+
+.Ultramarine {
+    color: white;
+    background: #1c51e7
+}
+
+.Moon {
+    color: black;
+    background: #d8d7d8
+}
+
+.Blue {
+    color: white;
+    background: #324ba9
+}
+
+.Periwinkle {
+    color: white;
+    background: #4866d5
+}
+
+.Lapis {
+    color: white;
+    background: #2b84ff
+}
+
+.Splash {
+    color: black;
+    background: #6392df
+}
+
+.Cornflower {
+    color: black;
+    background: #75a8ff
+}
+
+.Sky {
+    color: black;
+    background: #aec8ff
+}
+
+.Stonewash {
+    color: black;
+    background: #7895c1
+}
+
+.Overcast {
+    color: white;
+    background: #444f69
+}
+
+.Steel {
+    color: white;
+    background: #556979
+}
+
+.Denim {
+    color: white;
+    background: #2f4557
+}
+
+.Ice {
+    color: black;
+    background: #ebefff
+}
+
+.Abyss {
+    color: white;
+    background: #0d1e24
+}
+
+.Phthalo {
+    color: white;
+    background: #0b2d46
+}
+
+.Azure {
+    color: white;
+    background: #0a3d67
+}
+
+.Caribbean {
+    color: white;
+    background: #0086ce
+}
+
+.Teal {
+    color: white;
+    background: #2b768f
+}
+
+.Cerulean {
+    color: white;
+    background: #00b4d6
+}
+
+.Cyan {
+    color: black;
+    background: #00fff0
+}
+
+.Robin {
+    color: black;
+    background: #9aeaef
+}
+
+.Aqua {
+    color: black;
+    background: #72c4c4
+}
+
+.Turquoise {
+    color: white;
+    background: #3aa0a1
+}
+
+.Orca {
+    color: black;
+    background: #e0dfff
+}
+
+.Spruce {
+    color: black;
+    background: #8bbbb2
+}
+
+.Pistachio {
+    color: black;
+    background: #e2ffe6
+}
+
+.Seafoam {
+    color: black;
+    background: #b2e2bd
+}
+
+.Mint {
+    color: black;
+    background: #9affc7
+}
+
+.Jade {
+    color: white;
+    background: #61ab89
+}
+
+.Spearmint {
+    color: white;
+    background: #148e67
+}
+
+.Thicket {
+    color: white;
+    background: #005e48
+}
+
+.Peacock {
+    color: white;
+    background: #1f4739
+}
+
+.Emerald {
+    color: white;
+    background: #20603f
+}
+
+.Shamrock {
+    color: white;
+    background: #236925
+}
+
+.Platinum {
+    color: black;
+    background: #c8bece
+}
+
+.Jungle {
+    color: white;
+    background: #1e361a
+}
+
+.Hunter {
+    color: white;
+    background: #1d2715
+}
+
+.Forest {
+    color: white;
+    background: #425035
+}
+
+.Camo {
+    color: white;
+    background: #51684c
+}
+
+.Algae {
+    color: black;
+    background: #97af8b
+}
+
+.Swamp {
+    color: white;
+    background: #687f67
+}
+
+.Avocado {
+    color: white;
+    background: #567c34
+}
+
+.Green {
+    color: white;
+    background: #629c3f
+}
+
+.Fern {
+    color: black;
+    background: #7ece73
+}
+
+.Mantis {
+    color: black;
+    background: #99ff9c
+}
+
+.Silver {
+    color: black;
+    background: #bbbabf
+}
+
+.Pear {
+    color: black;
+    background: #8ecd55
+}
+
+.Leaf {
+    color: black;
+    background: #a5e32d
+}
+
+.Radioactive {
+    color: black;
+    background: #c6ff00
+}
+
+.Honeydew {
+    color: black;
+    background: #d0e672
+}
+
+.Peridot {
+    color: black;
+    background: #e8ffb5
+}
+
+.Chartreuse {
+    color: black;
+    background: #b4cd3c
+}
+
+.Spring {
+    color: white;
+    background: #a9a832
+}
+
+.Crocodile {
+    color: white;
+    background: #828335
+}
+
+.Olive {
+    color: white;
+    background: #697135
+}
+
+.Murk {
+    color: white;
+    background: #4b4420
+}

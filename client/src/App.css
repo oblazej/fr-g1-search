@@ -2,28 +2,4 @@ body {
   text-align: center;
 }
 
-.bordered-main div {
-  width: 250px;
-  height: 250px;
-  border: 1px solid black;
-  margin: 10px;
-}
-
-.bordered-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.szybkitest {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: center;
-}
-
-select {
-  width: 10vw;
-}
+/* make this better */

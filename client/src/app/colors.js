@@ -179,3 +179,5 @@ const colors = [
 ]
 
 export default colors;
+
+//verify if you need values of these colors
