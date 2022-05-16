@@ -1,0 +1,20 @@
+.navbar-link-div {
+    padding: 1rem;
+    background-color: white;
+    width: 15vw;
+    margin: 1rem;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    -webkit-box-shadow: inset 0px 0px 100px -55px rgba(66, 68, 90, 1);
+    -moz-box-shadow: inset 0px 0px 100px -55px rgba(66, 68, 90, 1);
+    box-shadow: inset 0px 0px 100px -55px rgba(66, 68, 90, 1);
+    border-radius: 5%;
+}
+
+#navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
