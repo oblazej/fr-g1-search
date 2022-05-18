@@ -8,6 +8,7 @@ function ColorInput (props) {
     return(<div>
         <label>{props.colorOrder} color: </label>
         <select name={props.colorOrder} id={props.colorOrder}>
+            <option>{props.placeholderText}</option>
             {colorsPaletteOptions}
         </select>
         </div>

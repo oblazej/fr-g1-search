@@ -1,7 +1,7 @@
 .navbar-link-div {
     padding: 1rem;
     background-color: white;
-    width: 15vw;
+    min-width: 15vw;
     margin: 1rem;
     text-align: center;
     font-family: 'VT323', monospace;

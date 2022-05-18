@@ -7,9 +7,30 @@
 
 body {
   font-family: 'Varela Round', sans-serif;
-  ;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: 'VT323', monospace;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+::-moz-selection {
+  color: red;
+  background: yellow;
+}
+
+::selection {
+  color: #02fad5;
+  background: #390480;
 }

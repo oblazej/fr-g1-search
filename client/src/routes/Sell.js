@@ -2,10 +2,14 @@ import React from 'react';
 import ColorInput from '../features/color-input/ColorInput';
 import ElementInput from '../features/element-input/ElementInput';
 import TextInput from '../features/text-input/TextInput';
+import { motion } from "framer-motion";
 //should this section autofill?
 function Sell() {
     return (
-      <main style={{ padding: "1rem 0" }}>
+      <motion.div id="sell-div"
+       initial={{opacity: 0}}
+       animate={{opacity: 1}}
+       exit={{opacity: 0}}>
         <h2>Sell a dragon</h2>
         <div>
         <form>
@@ -22,7 +26,7 @@ function Sell() {
 <p>Load the dragon preview</p><p>Confirm</p>
         </form>
         </div>
-      </main>
+        </motion.div>
     );
   }
 
