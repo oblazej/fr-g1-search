@@ -4,7 +4,8 @@ import ElementInput from '../features/element-input/ElementInput';
 import TextInput from '../features/text-input/TextInput';
 import { motion } from "framer-motion";
 import "./Search.css";
-import dragon_placeholder from "../static/img/dragon_placeholder.png"
+import dragon_placeholder from "../static/img/dragon_placeholder.png";
+import SingleColorSelection from '../features/single-color-selection/SingleColorSelection';
 
 function Search() {
     return (
@@ -21,12 +22,29 @@ function Search() {
           </div>
           </div>
         <form>
-<ColorInput colorOrder="primary" placeholderText="select to add"/>
-<ColorInput colorOrder="secondary" placeholderText="select to add"/>
-<ColorInput colorOrder="tertiary" placeholderText="select to add"/>
+<h2>Fill in:</h2>
+<SingleColorSelection>
+  <ColorInput colorOrder="primary" labelText="primary color: " placeholderText="select to add"/>
+</SingleColorSelection>
+<SingleColorSelection>
+<ColorInput colorOrder="secondary" labelText="secondary color: " placeholderText="select to add"/>
+</SingleColorSelection>
+<SingleColorSelection>
+<ColorInput colorOrder="tertiary" labelText="tertiary color: " placeholderText="select to add"/>
+</SingleColorSelection>
+
+{/* <p>primary color range:</p>
+<ColorInput placeholderText="select to add"/>
+<ColorInput placeholderText="select to add"/>
+<p>secondary color range:</p>
+<ColorInput placeholderText="select to add"/>
+<ColorInput placeholderText="select to add"/>
+<p>tertiary color range:</p>
+<ColorInput placeholderText="select to add"/>
+<ColorInput placeholderText="select to add"/>
 <ElementInput placeholderText="select to add"/>
 <TextInput text="Name of the scheme"/>
-<TextInput text="Your IGN"/>
+<TextInput text="Your IGN"/> */}
 <p>Load the dragon preview</p><p>Confirm</p>
         </form>
         </div>

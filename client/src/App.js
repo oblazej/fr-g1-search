@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { motion } from 'framer-motion';
-
+//move V this code to component Home or something
 function App() {
   return (
     <motion.div id="app-div"

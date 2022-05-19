@@ -6,8 +6,8 @@ function ColorInput (props) {
     const colorsPaletteOptions = colors.map((color) => <option value={color[0]} key={(props.colorOrder + color[1])} className={color[1]}>{color[1]}</option>)
 
     return(<div>
-        <label>{props.colorOrder} color: </label>
-        <select name={props.colorOrder} id={props.colorOrder}>
+        <label>{props.labelText}</label>
+        <select name={props.colorOrder} id={props.colorOrder} onChange={() => console.log("klik")}>
             <option>{props.placeholderText}</option>
             {colorsPaletteOptions}
         </select>
