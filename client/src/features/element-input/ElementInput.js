@@ -1,5 +1,5 @@
 import React from "react";
-import elements from "../../app/elements";
+import elements from "../../constants/elements";
 
 function ElementInput (props) {
     const elementsOptions = elements.map((element) => <option value={element[0]} key={element[1]}>{element[1]}</option>)

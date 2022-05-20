@@ -4,7 +4,7 @@ import ElementInput from '../features/element-input/ElementInput';
 import TextInput from '../features/text-input/TextInput';
 import { motion } from "framer-motion";
 import "./Search.css";
-import dragon_placeholder from "../static/img/dragon_placeholder.png";
+import dragon_placeholder from "../assets/images/dragon_placeholder.png";
 import SingleColorSelection from '../features/single-color-selection/SingleColorSelection';
 
 function Search() {
@@ -23,15 +23,15 @@ function Search() {
           </div>
         <form>
 <h2>Fill in:</h2>
-<SingleColorSelection>
+<SingleColorSelection colors="primaryColors">
   <ColorInput colorOrder="primary" labelText="primary color: " placeholderText="select to add"/>
 </SingleColorSelection>
-<SingleColorSelection>
+{/* <SingleColorSelection>
 <ColorInput colorOrder="secondary" labelText="secondary color: " placeholderText="select to add"/>
 </SingleColorSelection>
 <SingleColorSelection>
 <ColorInput colorOrder="tertiary" labelText="tertiary color: " placeholderText="select to add"/>
-</SingleColorSelection>
+</SingleColorSelection> */}
 
 {/* <p>primary color range:</p>
 <ColorInput placeholderText="select to add"/>
