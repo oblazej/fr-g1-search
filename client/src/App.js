@@ -1,33 +1,23 @@
 import React from 'react';
-import './App.css';
-import { motion } from 'framer-motion';
-//move V this code to component Home or something
+import { BrowserRouter
+} from "react-router-dom";
+import { Provider } from 'react-redux';
+import { store } from './app/store';
+import AnimatedRoutes from "./features/AnimatedRoutes";
+import Header from "./components/header/Header";
+import Navbar from "./components/navbar/Navbar";
+
 function App() {
   return (
-    <motion.div id="app-div"
-    initial={{opacity: 0}}
-    animate={{opacity: 1}}
-    exit={{opacity: 0}}>
-      <h2 className='main-title'>Recently added dragons:</h2>
-      <div className='bordered-main'>
-      <div className='bordered'></div>
-      <div className='bordered'></div>
-      <div className='bordered'></div>
-      <div className='bordered'></div>
-      <div className='bordered'></div>
-      </div>
-      <p>show all</p>
-
-      <h2 className='main-title'>Recently added schemes:</h2>
-      <div className='bordered-main'>
-      <div className='bordered'></div>
-      <div className='bordered'></div>
-      <div className='bordered'></div>
-      <div className='bordered'></div>
-      <div className='bordered'></div>
-      </div>
-      <p>show all</p>
-    </motion.div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Header />
+        <Navbar />
+        <main>
+          <AnimatedRoutes />
+        </main>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

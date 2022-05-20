@@ -1,11 +1,11 @@
 import React from 'react';
-import ColorInput from '../features/color-input/ColorInput';
-import ElementInput from '../features/element-input/ElementInput';
-import TextInput from '../features/text-input/TextInput';
 import { motion } from "framer-motion";
+import ColorInput from "../../components/color-input/ColorInput";
+import ElementInput from '../../components/element-input/ElementInput';
+import TextInput from '../../components/text-input/TextInput';
+import SingleColorSelection from '../../components/single-color-selection/SingleColorSelection';
+import dragon_placeholder from "../../assets/images/dragon_placeholder.png";
 import "./Search.css";
-import dragon_placeholder from "../assets/images/dragon_placeholder.png";
-import SingleColorSelection from '../features/single-color-selection/SingleColorSelection';
 
 function Search() {
     return (

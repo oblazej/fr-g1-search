@@ -4,17 +4,17 @@ import {
     Route,
     useLocation
 } from "react-router-dom";
-import App from '../../App';
-import Sell from "../../routes/Sell";
-import Search from "../../routes/Search";
 import { AnimatePresence } from "framer-motion";
+import Home from "../routes/home/Home";
+import Sell from "../routes/sell/Sell";
+import Search from "../routes/search/Search";
 
 function AnimatedRoutes() {
     const location = useLocation();
     return (
             <AnimatePresence exitBeforeEnter>
             <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<App />} />
+                <Route path="/" element={<Home />} />
                 <Route path="sell" element={<Sell />} />
                 <Route path="search" element={<Search />} />
             </Routes>

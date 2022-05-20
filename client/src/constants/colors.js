@@ -149,7 +149,7 @@ const colors = [
 [147, "Copper", "#A44B28"], 
 [148, "Rust", "#8B3220"], 
 [149, "Tomato", "#BA311C"], 
-[150, "Vermillion", "#E22D17"], 
+[150, "Vermilion", "#E22D17"], 
 [151, "Ruby", "#CD000E"], 
 [152, "Cherry", "#AA0024"], 
 [153, "Crimson", "#850012"], 

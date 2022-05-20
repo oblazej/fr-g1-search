@@ -1,20 +1,20 @@
 import React from "react";
-import colors from "../../constants/colors";
-import "./SingleColorSelection.css";
 import { useSelector } from "react-redux";
+import colors from "../../constants/colors";
+import SelectedColor from "../selected-color/SelectedColor";
+import "./SingleColorSelection.css";
 
-function SingleColorSelection (props) {
-
+function SingleColorSelection(props) {
     const selectedColors = useSelector((state) => state[props.colors].value);
 
-    return(
+    return (
         <div className="single-color-selection">
             {props.children}
             {selectedColors.map((color) => {
-                return <div className={[colors[color][1], "selected-color-div"].join(" ")}>{colors[color][1]}</div>
+                return <SelectedColor color={colors[color][1]}/>
             })}
         </div>
-    ); 
+    );
 }
 
 export default SingleColorSelection;
