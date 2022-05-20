@@ -1,8 +1,9 @@
 import React from 'react';
-import ColorInput from '../features/color-input/ColorInput';
-import ElementInput from '../features/element-input/ElementInput';
-import TextInput from '../features/text-input/TextInput';
 import { motion } from "framer-motion";
+import ColorInput from '../../components/color-input/ColorInput';
+import ElementInput from '../../components/element-input/ElementInput';
+import TextInput from '../../components/text-input/TextInput';
+
 //should this section autofill?
 function Sell() {
     return (
