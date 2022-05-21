@@ -24,14 +24,14 @@ function Search() {
         <form>
 <h2>Fill in:</h2>
 <SingleColorSelection colors="primaryColors">
-  <ColorInput colorOrder="primary" labelText="primary color: " placeholderText="select to add"/>
+  <ColorInput colorOrder="primaryColors" labelText="primary color: " placeholderText="select to add"/>
 </SingleColorSelection>
-{/* <SingleColorSelection>
-<ColorInput colorOrder="secondary" labelText="secondary color: " placeholderText="select to add"/>
+<SingleColorSelection colors="secondaryColors">
+<ColorInput colorOrder="secondaryColors" labelText="secondary color: " placeholderText="select to add"/>
 </SingleColorSelection>
-<SingleColorSelection>
-<ColorInput colorOrder="tertiary" labelText="tertiary color: " placeholderText="select to add"/>
-</SingleColorSelection> */}
+<SingleColorSelection colors="tertiaryColors">
+<ColorInput colorOrder="tertiaryColors" labelText="tertiary color: " placeholderText="select to add"/>
+</SingleColorSelection>
 
 {/* <p>primary color range:</p>
 <ColorInput placeholderText="select to add"/>

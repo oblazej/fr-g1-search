@@ -3,6 +3,6 @@ import colorsReducer from "../features/SelectedColors";
 
 export const store = configureStore({
   reducer: {
-    primaryColors: colorsReducer
+    selectedColors: colorsReducer
   },
 });
