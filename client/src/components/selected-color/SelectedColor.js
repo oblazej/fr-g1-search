@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { deleteColor } from "../../features/SelectedColors";
 
 function SelectedColor(props) {
     const dispatch = useDispatch();
-    const [colorID, setColorID] = useState(props.colorID);
 
     return (
         <motion.div 
@@ -13,9 +12,9 @@ function SelectedColor(props) {
        animate={{scale: 1}}
         className={[props.color, "selected-color-div"].join(" ")}
             onClick={(e) =>
-                dispatch(deleteColor({color: colorID, colorOrder: props.colorOrder}))
+                dispatch(deleteColor({color: props.colorID, colorOrder: props.colorOrder}))
             }>
-            {colorID} {props.color}
+            {props.colorID} {props.color}
         </motion.div>
     );
 }
