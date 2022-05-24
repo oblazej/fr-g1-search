@@ -7,12 +7,12 @@ function SelectedColor(props) {
     const dispatch = useDispatch();
 
     return (
-        <motion.div 
-        initial={{scale: 0}}
-       animate={{scale: 1}}
-        className={[props.color, "selected-color-div"].join(" ")}
+        <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            className={[props.color, "selected-color-div"].join(" ")}
             onClick={(e) =>
-                dispatch(deleteColor({color: props.colorID, colorOrder: props.colorOrder}))
+                dispatch(deleteColor({ color: props.colorID, colorOrder: props.colorOrder }))
             }>
             {props.colorID} {props.color}
         </motion.div>
