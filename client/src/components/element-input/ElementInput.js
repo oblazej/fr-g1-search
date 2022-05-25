@@ -1,17 +1,18 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addElement } from "../../features/SelectedElements";
 import elements from "../../constants/elements";
 
 function ElementInput(props) {
     //try using a hook on V this
+    const dispatch = useDispatch();
     const elementsOptions = elements.map((element) => <option value={element[0]} key={element[1]}>{element[1]}</option>)
 
     return (
         <div>
-            <label>
-                element:
-            </label>
             <select name="element"
-                id="element">
+                id="element"
+                onChange={(e) => {dispatch(addElement(e.target.value))}}>
                 <option>
                     {props.placeholderText}
                 </option>

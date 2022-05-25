@@ -1,22 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
-import { deleteColor } from "../../features/SelectedColors";
+import { deleteElement } from "../../features/SelectedElements";
 
-function SelectedColor(props) {
+function SelectedElement(props) {
     const dispatch = useDispatch();
 
     return (
         <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className={[props.color, "selected-color-div"].join(" ")}
+            className="selected-element-div"
             onClick={(e) =>
-                dispatch(deleteColor({ color: props.colorID, colorOrder: props.colorOrder }))
+                dispatch(deleteElement(props.elementID))
             }>
-            {props.color}
+            {props.element}
         </motion.div>
     );
 }
 
-export default SelectedColor;
+export default SelectedElement;

@@ -16,10 +16,12 @@ function ColorRangeSelection(props) {
 
     useEffect(() => {
         if(firstColor && secondColor) {
-            dispatch(addColor({ color: `${firstColor}-${secondColor}`, colorOrder: props.colors}));
+            //game doesn't check if you choose the same color
+            if(firstColor !== secondColor) {
+                dispatch(addColor({ color: `${firstColor}-${secondColor}`, colorOrder: props.colors}));
+            }
             firstColorRef.current.clearSelect();
             secondColorRef.current.clearSelect();
-            console.log(firstColor, secondColor)
             setFirstColor(null);
             setSecondColor(null);
         }

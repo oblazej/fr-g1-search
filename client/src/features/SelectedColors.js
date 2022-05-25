@@ -14,9 +14,8 @@ export const colorsSlice = createSlice({
         addColor: (state, action) => {
             if (!state.value[action.payload.colorOrder].includes(action.payload.color)) {
                 state.value[action.payload.colorOrder].push(action.payload.color);
-            } else {
-                state.value[action.payload.colorOrder] = state.value[action.payload.colorOrder];
             }
+            
         },
 
         deleteColor: (state, action) => {

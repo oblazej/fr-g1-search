@@ -1,38 +1,42 @@
 import React from 'react';
 import SingleColorSelection from '../../components/single-color-selection/SingleColorSelection';
-import ColorInput from "../../components/color-input/ColorInput";
-import ElementInput from '../../components/element-input/ElementInput';
+import ElementsSelection from '../elements-selection/ElementsSelection';
 import TextInput from '../../components/text-input/TextInput';
 import ColorRangeSelection from '../color-range-selection/ColorRangeSelection';
+import "./SearchForm.css";
 
 function SearchForm() {
 
     return (
         <form>
             <h2>Fill in:</h2>
+            <div className="single-color-selection-div">
             <SingleColorSelection colors="primaryColors">
-            <span>primary color:</span>
+                <label>primary color:</label>
             </SingleColorSelection>
             <SingleColorSelection colors="secondaryColors">
-            <span>secondary color:</span>
+                <label>secondary color:</label>
             </SingleColorSelection>
             <SingleColorSelection colors="tertiaryColors">
-            <span>tertiary color:</span>
+                <label>tertiary color:</label>
             </SingleColorSelection>
+            </div>
+            <div className="color-range-selection-div">
             <ColorRangeSelection colors="primaryRanges">
-            <span>primary color range:</span>
+                <label>primary color range:</label>
             </ColorRangeSelection>
-        {/* <ColorInput placeholderText="select to add"/>
-        <ColorInput placeholderText="select to add"/>
-        <p>secondary color range:</p>
-        <ColorInput placeholderText="select to add"/>
-        <ColorInput placeholderText="select to add"/>
-        <p>tertiary color range:</p>
-        <ColorInput placeholderText="select to add"/>
-        <ColorInput placeholderText="select to add"/>
-        <ElementInput placeholderText="select to add"/>
-        <TextInput text="Name of the scheme"/>
-        <TextInput text="Your IGN"/> */}
+            <ColorRangeSelection colors="secondaryRanges">
+                <label>secondary color range:</label>
+            </ColorRangeSelection>
+            <ColorRangeSelection colors="tertiaryRanges">
+                <label>tertiary color range:</label>
+            </ColorRangeSelection>
+            </div>
+            <ElementsSelection>
+                <label>Element:</label>
+            </ElementsSelection>
+            <TextInput text="Name of the scheme" />
+            <TextInput text="Your IGN" />
             <p>Load the dragon preview</p><p>Confirm</p>
         </form>
     )
