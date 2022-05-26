@@ -30,8 +30,8 @@ function ColorRangeSelection(props) {
     return (
         <div className="color-range-selection">
             {props.children}
-            <ColorInput colorOrder="primaryRanges" placeholderText="select first color" type="range" handler={setFirstColor} ref={firstColorRef}/>
-            <ColorInput colorOrder="primaryRanges" placeholderText="select second color" type="range" handler={setSecondColor} ref={secondColorRef}/>
+            <ColorInput colorOrder={props.colors} placeholderText="select first color" type="range" handler={setFirstColor} ref={firstColorRef}/>
+            <ColorInput colorOrder={props.colors} placeholderText="select second color" type="range" handler={setSecondColor} ref={secondColorRef}/>
             {selectedColors.map((color) => {
                 return <SelectedRange key={color} range={color} rangeIDs={color.split("-")} colorOrder={props.colors}/>
             })}

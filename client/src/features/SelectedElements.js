@@ -5,9 +5,9 @@ export const elementsSlice = createSlice({
     initialState: { value: [] },
     reducers: {
         addElement: (state, action) => {
-            if(!state.value.includes(action.payload)) {
+            if (!state.value.includes(action.payload)) {
                 state.value.push(action.payload);
-            } 
+            }
         },
 
         deleteElement: (state, action) => {

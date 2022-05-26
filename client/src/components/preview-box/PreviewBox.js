@@ -6,7 +6,7 @@ function PreviewBox() {
         <div>
             <h2 className="preview-title">Preview</h2>
             <div className="preview-frame">
-                <img src={dragon_placeholder} alt="dragon placeholder" />
+                <img className="preview-image" src={dragon_placeholder} alt="dragon placeholder" />
             </div>
         </div>
     )

@@ -30,16 +30,16 @@ const ColorInput = forwardRef((props, ref) => {
     }
 
     return (
-        <div>
+        <>
             <select name={props.colorOrder} value={color}
-                id={props.colorOrder}
+                className={props.colorOrder}
                 onChange={colorSelectionHandle}>
                 <option disabled value="default">
                     {props.placeholderText}
                 </option>
                 {colorsPaletteOptions}
             </select>
-        </div>
+        </>
     );
 })
 

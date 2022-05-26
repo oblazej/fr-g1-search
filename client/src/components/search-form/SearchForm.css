@@ -1,8 +1,64 @@
-.single-color-selection-div, .color-range-selection-div {
+.single-color-selection-div,
+.color-range-selection-div {
     display: flex;
-flex-direction: row;
-flex-wrap: nowrap;
-justify-content: center;
-align-items: stretch;
-align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+.element-and-information {
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+select, input {
+    display: block;
+    width: 8vw;
+    margin-top: 0.1rem;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+.selected-range-first {
+    font-size: 0.8rem;
+    height: 1rem;
+    padding: 0 0.25rem;
+    margin-top: 0.25rem;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.selected-range-last {
+    font-size: 0.8rem;
+    height: 1rem;
+    padding: 0 0.25rem;
+    margin-bottom: 0.25rem;
+    border: 1px solid black;
+    border-top: 0;
+    cursor: pointer;
+}
+
+.selected-element-div {
+    font-size: 0.8rem;
+    height: 1rem;
+    padding: 0 0.25rem;
+    margin: 0.25rem 0;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.search-form-title {
+    margin: 0.5rem 1rem;
+    text-decoration: overline;
 }

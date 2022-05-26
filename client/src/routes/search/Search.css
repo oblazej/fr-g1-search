@@ -1,11 +1,16 @@
 .preview-frame {
-    width: 350px;
-    height: 350px;
-    -webkit-box-shadow: inset 0px 0px 100px -55px rgba(66, 68, 90, 1);
-    -moz-box-shadow: inset 0px 0px 100px -55px rgba(66, 68, 90, 1);
-    box-shadow: inset 0px 0px 100px -55px rgba(66, 68, 90, 1);
+    position: relative;
+    width: 360px;
+    height: 360px;
+    background: rgba(0, 0, 0, 0.75);
+    background: linear-gradient(to right top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
     border-radius: 5%;
     padding: 0.5rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    /* -webkit-box-shadow: inset 0px 0px 100px -55px rgb(11, 78, 247);
+    -moz-box-shadow: inset 0px 0px 100px -55px rgba(66, 68, 90, 1);
+    box-shadow: inset 0px 0px 100px -55px rgba(66, 68, 90, 1); */
 }
 
 .flexit {
@@ -18,11 +23,18 @@
 }
 
 form {
-    margin: 1rem;
+    margin: 2rem;
+    margin-top: 3rem;
+    background: rgba(0, 0, 0, 0.75);
+    background: linear-gradient(to right top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
+    border-radius: 5%;
+    padding: 0.5rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .preview-frame img {
-    filter: drop-shadow(0 0 5px #696969);
+    filter: drop-shadow(0 0 5px #1a1a1a);
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
@@ -37,4 +49,8 @@ form {
 .preview-title {
     margin: 0.5rem 1rem;
     text-align: left;
+}
+
+#search-div {
+    color: white;
 }

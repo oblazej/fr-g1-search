@@ -1,13 +1,12 @@
 .single-color-selection {
-    border: 1px solid black;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .selected-color-div {
-    width: 50%;
-    padding: 0.25rem;
+    font-size: 0.8rem;
+    height: 1rem;
+    padding: 0 0.25rem;
     margin: 0.25rem 0;
-    border-radius: 5%;
     cursor: pointer;
     border: 1px solid black;
 }

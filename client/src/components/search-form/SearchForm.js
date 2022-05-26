@@ -8,8 +8,8 @@ import "./SearchForm.css";
 function SearchForm() {
 
     return (
-        <form>
-            <h2>Fill in:</h2>
+        <form id="search-form">
+            <h2 className="search-form-title">Fill in:</h2>
             <div className="single-color-selection-div">
             <SingleColorSelection colors="primaryColors">
                 <label>primary color:</label>
@@ -32,12 +32,13 @@ function SearchForm() {
                 <label>tertiary color range:</label>
             </ColorRangeSelection>
             </div>
+            <div className="element-and-information">
             <ElementsSelection>
                 <label>Element:</label>
             </ElementsSelection>
             <TextInput text="Name of the scheme" />
             <TextInput text="Your IGN" />
-            <p>Load the dragon preview</p><p>Confirm</p>
+            </div>
         </form>
     )
 }
