@@ -1,8 +1,8 @@
 #header {
     padding: 1rem 2rem;
     margin-bottom: 1rem;
-    background-color: rgba(255, 255, 255, 1);
-    background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 1%, rgba(245, 245, 245, 1) 100%);
+    background: rgba(0, 0, 0, 0.75);
+    background: linear-gradient(to right top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
 }
 
 #header-title {
@@ -12,10 +12,6 @@
 
 #header-description {
     padding: 0rem 1rem;
-}
-
-a:visited {
-    color: black;
 }
 
 #header-title a {

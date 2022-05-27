@@ -39,6 +39,8 @@ function SearchForm() {
             <TextInput text="Name of the scheme" />
             <TextInput text="Your IGN" />
             </div>
+            <button className="search-submit">Load dragon preview</button>
+            <button className="search-submit">Submit</button>
         </form>
     )
 }

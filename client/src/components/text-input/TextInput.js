@@ -4,7 +4,7 @@ function TextInput(props) {
     const [text, setText] = useState("");
 
     return (
-        <div>
+        <div className="text-input">
             <label>
                 {props.text}:
             </label>

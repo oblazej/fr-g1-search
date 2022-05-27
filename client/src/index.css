@@ -7,7 +7,8 @@
 
 body {
   font-family: 'Varela Round', sans-serif;
-  height: 100vh;
+  color: white;
+  height: 100%;
   background-color: rgba(136, 0, 132, 1);
   background-image: linear-gradient(163deg, rgba(136, 0, 132, 1) 0%, rgba(0, 63, 111, 1) 100%);
 }
@@ -31,7 +32,7 @@ main {
 
 ::selection {
   color: #02fad5;
-  background: #390480;
+  background: black;
 }
 
 h2 {
@@ -46,4 +47,39 @@ h2 {
   text-align: center;
   font-size: 3rem;
   text-align: center;
+}
+
+@media all and (max-width: 700px) {
+  
+  .single-color-selection-div, .color-range-selection-div, .element-and-information {
+    flex-direction: column;
+    width: 67vw;
+  }
+
+  /* input, select {
+    width: inherit;
+  } */
+
+  .element-and-information {
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  body { 
+    height: 100%;
+  }
+  
+  .flexit {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+
+@media all and (min-width: 701px) {
+  .single-color-selection {
+    width: 100%;
+}
+
 }

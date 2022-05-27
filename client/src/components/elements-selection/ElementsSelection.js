@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import ElementInput from '../../components/element-input/ElementInput';
 import SelectedElement from "../selected-element/SelectedElement";
 import elements from "../../constants/elements";
-
+import "./ElementsSelection.css"
 
 function ElementsSelection(props) {
     const selectedElements = useSelector((state) => state.selectedElements.value);
