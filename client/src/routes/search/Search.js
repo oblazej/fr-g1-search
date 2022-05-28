@@ -5,6 +5,7 @@ import SearchForm from '../../components/search-form/SearchForm';
 import "./Search.css";
 
 function Search() {
+
   return (
     <motion.div id="search-div"
       initial={{ opacity: 0 }}

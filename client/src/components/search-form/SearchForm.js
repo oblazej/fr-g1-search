@@ -4,8 +4,18 @@ import ElementsSelection from '../elements-selection/ElementsSelection';
 import TextInput from '../../components/text-input/TextInput';
 import ColorRangeSelection from '../color-range-selection/ColorRangeSelection';
 import "./SearchForm.css";
+import Axios from "axios";
 
 function SearchForm() {
+
+    const sendReq = () => {
+        Axios.post("http://localhost:3001/addscheme", {
+          name: "test"
+        }).then(() => {
+            console.log("succ")
+        })
+      }
+    
 
     return (
         <form id="search-form">
@@ -40,7 +50,7 @@ function SearchForm() {
             <TextInput text="Your IGN" />
             </div>
             <button className="search-submit">Load dragon preview</button>
-            <button className="search-submit">Submit</button>
+            <button className="search-submit" onClick={sendReq}>Submit</button>
         </form>
     )
 }
