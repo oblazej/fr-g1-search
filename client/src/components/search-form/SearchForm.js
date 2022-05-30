@@ -8,9 +8,14 @@ import Axios from "axios";
 
 function SearchForm() {
 
-    const sendReq = () => {
+    const sendReq = (e) => {
+        e.preventDefault();
         Axios.post("http://localhost:3001/addscheme", {
-          name: "test"
+          name: "test",
+          primaryColors: "cos1",
+          secondaryColors: "emee",
+          tertiaryColors: "erererr",
+          element: "121232"
         }).then(() => {
             console.log("succ")
         })
