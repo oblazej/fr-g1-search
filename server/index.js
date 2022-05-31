@@ -7,19 +7,23 @@ const jsdom = require("jsdom");
 app.use(cors());
 app.use(express.json());
 
-axios
-  .get('https://www1.flightrising.com/scrying/predict/50678302')
-  .then(res => {
-    console.log(`statusCode: ${res.status}`);
-    let doc = new jsdom.JSDOM(res.data);
-    console.log(doc.window.document.querySelector("#dragon-image"));
+//todo: error response
+
+app.get("/loaddragon/:id", (req, res) => {
+  axios
+  .get(`https://www1.flightrising.com/dragon/${req.params.id}`)
+  .then(response => {
+    console.log(`statusCode: ${response.status}`);
+    let doc = new jsdom.JSDOM(response.data);
+    let dragonBio = [...doc.window.document.querySelectorAll(".dragon-profile-stat-icon-value")].map((item) => item.textContent.replace(/(\r\n|\n|\r)/gm, "").trim().split(" ")[0]);
+    let dragonImage = [...doc.window.document.querySelector("#dragon-profile-dragon-frame").childNodes][1].src;
+    console.log(dragonImage)
+    res.json({bio: dragonBio, img: dragonImage});
   })
   .catch(error => {
     console.error(error);
   });
-
-
-
+});
 
 
 app.post("/addscheme", (req, res) => {

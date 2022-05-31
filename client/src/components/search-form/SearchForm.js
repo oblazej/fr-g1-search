@@ -8,33 +8,17 @@ import Axios from "axios";
 
 function SearchForm() {
 
-
-
     const sendReq = (e) => {
         e.preventDefault();
-        Axios.get("https://www1.flightrising.com/dragon/27525707")
-            .then(response => {
-                // access parsed JSON response data using response.data field
-                let data = response.data
-                console.log(data)
-            })
-            .catch(error => {
-                if (error.response) {
-                    //get HTTP error code
-                    console.log(error.reponse.status)
-                } else {
-                    console.log(error.message)
-                }
-            })
-        // Axios.post("http://localhost:3001/addscheme", {
-        //   name: "test",
-        //   primaryColors: "cos1",
-        //   secondaryColors: "emee",
-        //   tertiaryColors: "erererr",
-        //   element: "121232"
-        // }).then(() => {
-        //     console.log("succ")
-        // })
+        Axios.post("http://localhost:3001/addscheme", {
+          name: "test",
+          primaryColors: "cos1",
+          secondaryColors: "emee",
+          tertiaryColors: "erererr",
+          element: "121232"
+        }).then(() => {
+            console.log("succ")
+        })
     }
 
 

@@ -8,7 +8,7 @@ function TextInput(props) {
             <label>
                 {props.text}:
             </label>
-            <input type="text" onChange={(e) => setText(e.target.value)}/>
+            <input type="text" className={props.innerText} onChange={(e) => setText(e.target.value)} value={props.innerText} disabled={props.disabled || false}/>
         </div>
     );
 }
