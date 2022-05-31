@@ -8,51 +8,67 @@ import Axios from "axios";
 
 function SearchForm() {
 
+
+
     const sendReq = (e) => {
         e.preventDefault();
-        Axios.post("http://localhost:3001/addscheme", {
-          name: "test",
-          primaryColors: "cos1",
-          secondaryColors: "emee",
-          tertiaryColors: "erererr",
-          element: "121232"
-        }).then(() => {
-            console.log("succ")
-        })
-      }
-    
+        Axios.get("https://www1.flightrising.com/dragon/27525707")
+            .then(response => {
+                // access parsed JSON response data using response.data field
+                let data = response.data
+                console.log(data)
+            })
+            .catch(error => {
+                if (error.response) {
+                    //get HTTP error code
+                    console.log(error.reponse.status)
+                } else {
+                    console.log(error.message)
+                }
+            })
+        // Axios.post("http://localhost:3001/addscheme", {
+        //   name: "test",
+        //   primaryColors: "cos1",
+        //   secondaryColors: "emee",
+        //   tertiaryColors: "erererr",
+        //   element: "121232"
+        // }).then(() => {
+        //     console.log("succ")
+        // })
+    }
+
 
     return (
         <form id="search-form">
             <h2 className="search-form-title">Fill in:</h2>
             <div className="single-color-selection-div">
-            <SingleColorSelection colors="primaryColors">
-                <label>primary color:</label>
-            </SingleColorSelection>
-            <SingleColorSelection colors="secondaryColors">
-                <label>secondary color:</label>
-            </SingleColorSelection>
-            <SingleColorSelection colors="tertiaryColors">
-                <label>tertiary color:</label>
-            </SingleColorSelection>
+                <SingleColorSelection colors="primaryColors">
+                    <label>primary color:</label>
+                </SingleColorSelection>
+                <SingleColorSelection colors="secondaryColors">
+                    <label>secondary color:</label>
+                </SingleColorSelection>
+                <SingleColorSelection colors="tertiaryColors">
+                    <label>tertiary color:</label>
+                </SingleColorSelection>
             </div>
             <div className="color-range-selection-div">
-            <ColorRangeSelection colors="primaryRanges">
-                <label>primary color range:</label>
-            </ColorRangeSelection>
-            <ColorRangeSelection colors="secondaryRanges">
-                <label>secondary color range:</label>
-            </ColorRangeSelection>
-            <ColorRangeSelection colors="tertiaryRanges">
-                <label>tertiary color range:</label>
-            </ColorRangeSelection>
+                <ColorRangeSelection colors="primaryRanges">
+                    <label>primary color range:</label>
+                </ColorRangeSelection>
+                <ColorRangeSelection colors="secondaryRanges">
+                    <label>secondary color range:</label>
+                </ColorRangeSelection>
+                <ColorRangeSelection colors="tertiaryRanges">
+                    <label>tertiary color range:</label>
+                </ColorRangeSelection>
             </div>
             <div className="element-and-information">
-            <ElementsSelection>
-                <label>Element:</label>
-            </ElementsSelection>
-            <TextInput text="Name of the scheme" />
-            <TextInput text="Your IGN" />
+                <ElementsSelection>
+                    <label>Element:</label>
+                </ElementsSelection>
+                <TextInput text="Name of the scheme" />
+                <TextInput text="Your IGN" />
             </div>
             <button className="search-submit">Load dragon preview</button>
             <button className="search-submit" onClick={sendReq}>Submit</button>
