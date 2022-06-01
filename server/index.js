@@ -3,12 +3,44 @@ const app = express();
 const cors = require("cors");
 const axios = require('axios');
 const jsdom = require("jsdom");
+const mongoClient = require("mongodb").MongoClient;
 
 app.use(cors());
 app.use(express.json());
 
-//todo: error response
+const url = "mongodb://localhost:27017";
+const dbname = "fr-genone-project";
 
+mongoClient.connect(url, {}, (error, client) => {
+  if(error) {
+    console.log("err");
+  }
+
+  const db = client.db(dbname);
+  // db.collection("colorSchemes").insertOne({
+  //   primaryColor: [0, 1],
+  //   secondaryColor: [1, 3],
+  //   tertiaryColor: [3],
+  //   element: ["water"]
+  // }, (error, result) => {
+  //   if(error) {
+  //     console.log("failed", error)
+  //   }
+
+  //   console.log(result)
+  // })
+
+  db.collection("colorSchemes").find({
+    primaryColor: [0, 1]
+  }).toArray((error, results) => {
+    console.log(results)
+  })
+  console.log("dziala")
+});
+
+
+
+//todo: error responses
 app.get("/loaddragon/:id", (req, res) => {
   axios
   .get(`https://www1.flightrising.com/dragon/${req.params.id}`)

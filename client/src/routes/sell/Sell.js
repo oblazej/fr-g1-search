@@ -12,7 +12,7 @@ function Sell() {
       exit={{ opacity: 0 }}>
       <h2 className="search-title">Sell a dragon</h2>
       <div className="flexit">
-        <PreviewBox />
+        <PreviewBox type="sell"/>
         <SellForm />
       </div>
     </motion.div>
