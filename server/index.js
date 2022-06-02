@@ -3,41 +3,27 @@ const app = express();
 const cors = require("cors");
 const axios = require('axios');
 const jsdom = require("jsdom");
-const mongoClient = require("mongodb").MongoClient;
+const mongoose = require("mongoose");
+const ColorScheme = require("./model/ColorScheme");
 
 app.use(cors());
 app.use(express.json());
 
-const url = "mongodb://localhost:27017";
-const dbname = "fr-genone-project";
+const url = "mongodb://localhost:27017/fr-genone-project";
 
-mongoClient.connect(url, {}, (error, client) => {
-  if(error) {
-    console.log("err");
-  }
-
-  const db = client.db(dbname);
-  // db.collection("colorSchemes").insertOne({
-  //   primaryColor: [0, 1],
-  //   secondaryColor: [1, 3],
-  //   tertiaryColor: [3],
-  //   element: ["water"]
-  // }, (error, result) => {
-  //   if(error) {
-  //     console.log("failed", error)
-  //   }
-
-  //   console.log(result)
-  // })
-
-  db.collection("colorSchemes").find({
-    primaryColor: [0, 1]
-  }).toArray((error, results) => {
-    console.log(results)
-  })
-  console.log("dziala")
+mongoose.connect(url, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
+ColorScheme.create({
+  "name": "schemat",
+  "creator": "Granica",
+  "primaryColors": [1, 2],
+  "secondaryColors": [1, 2, 3],
+  "tertiaryColors": [2, 3, 4],
+  "elements": ["water"]
+})
 
 
 //todo: error responses
