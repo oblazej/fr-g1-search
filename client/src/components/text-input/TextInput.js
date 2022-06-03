@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
 function TextInput(props) {
-    const [text, setText] = useState("");
 
     return (
         <div className="text-input">
             <label>
                 {props.text}:
             </label>
-            <input type="text" className={props.innerText} onChange={(e) => setText(e.target.value)} value={props.innerText} disabled={props.disabled || false}/>
+            <input type="text" className={props.innerText} onChange={(e) => props.handler(e.target.value)} value={props.innerText} disabled={props.disabled || false}/>
         </div>
     );
 }

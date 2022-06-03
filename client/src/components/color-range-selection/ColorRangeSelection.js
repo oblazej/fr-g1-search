@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addColor } from "../../features/SelectedColors";
 import ColorInput from "../color-input/ColorInput";
 import SelectedRange from "../selected-range/SelectedRange";
-import { useSelector } from "react-redux";
 import "./ColorRangeSelection.css";
 
 function ColorRangeSelection(props) {

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSelector } from "react-redux";
 import SingleColorSelection from '../../components/single-color-selection/SingleColorSelection';
 import ElementsSelection from '../elements-selection/ElementsSelection';
 import TextInput from '../../components/text-input/TextInput';
@@ -7,17 +8,25 @@ import "./SearchForm.css";
 import Axios from "axios";
 
 function SearchForm() {
+    const selectedColors = useSelector((state) => state.selectedColors.value);
+    const selectedElements = useSelector((state) => state.selectedElements.value);
+    const [schemeName, setSchemeName] = useState("");
+    const [schemeCreator, setSchemeCreator] = useState("");
 
-    const sendReq = (e) => {
+    const sendReq = (e) => {    
         e.preventDefault();
         Axios.post("http://localhost:3001/addscheme", {
-          name: "test",
-          primaryColors: "cos1",
-          secondaryColors: "emee",
-          tertiaryColors: "erererr",
-          element: "121232"
+          name: schemeName,
+          creator: schemeCreator,
+          primaryColors: selectedColors.primaryColors,
+          secondaryColors: selectedColors.secondaryColors,
+          tertiaryColors: selectedColors.tertiaryColors,
+          primaryRanges: selectedColors.primaryRanges,
+          secondaryRanges: selectedColors.secondaryRanges,
+          tertiaryColors: selectedColors.tertiaryRanges,
+          elements: selectedElements
         }).then(() => {
-            console.log("succ")
+            console.log("success")
         })
     }
 
@@ -51,8 +60,8 @@ function SearchForm() {
                 <ElementsSelection>
                     <label>Element:</label>
                 </ElementsSelection>
-                <TextInput text="Name of the scheme" />
-                <TextInput text="Your IGN" />
+                <TextInput text="Name of the scheme" handler={setSchemeName}/>
+                <TextInput text="Your IGN" handler={setSchemeCreator}/>
             </div>
             <button className="search-submit">Load dragon preview</button>
             <button className="search-submit" onClick={sendReq}>Submit</button>
