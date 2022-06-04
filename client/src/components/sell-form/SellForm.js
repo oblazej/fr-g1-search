@@ -13,12 +13,13 @@ function SellForm() {
   const [secondaryColor, setSecondaryColor] = useState("");
   const [tertiaryColor, setTertiaryColor] = useState("");
   const [element, setElement] = useState("");
+  const [sex, setSex] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const loadDragonPreview = (e) => {
     setIsLoading(true);
     e.preventDefault();
-    Axios.get(`http://localhost:3001/loaddragon/${dragonID}`)
+    Axios.get(`http://localhost:3001/dragons/load/${dragonID}`)
       .then(function (response) {
         // handle success
         console.log(response);
@@ -26,6 +27,7 @@ function SellForm() {
         setSecondaryColor(response.data.bio[1]);
         setTertiaryColor(response.data.bio[2]);
         setElement(response.data.bio[5]);
+        setSex(response.data.sex);
         dispatch(addValue({type: "img", val: `https://www1.flightrising.com${response.data.img}`}));
       })
       .catch(function (error) {
@@ -46,6 +48,7 @@ function SellForm() {
       <TextInput text="secondary color" innerText={secondaryColor} disabled={true} />
       <TextInput text="tertiary color" innerText={tertiaryColor} disabled={true} />
       <TextInput text="element" innerText={element} disabled={true} />
+      <TextInput text="sex" innerText={sex} disabled={true} />
       <TextInput text="price" />
       <TextInput text="Your IGN" />
     </form>
