@@ -33,26 +33,7 @@ app.get("/loaddragon/:id", (req, res) => {
     });
 });
 
-
-app.post("/addscheme", (req, res) => {
-  // do it with sets
-  let primaryColors, secondaryColors, tertiaryColors, elements;
-  primaryColors = req.body.primaryColors.map((color) => parseInt(color));
-  secondaryColors = req.body.secondaryColors.map((color) => parseInt(color));
-  tertiaryColors = req.body.tertiaryColors.map((color) => parseInt(color));
-  elements = req.body.elements.map((element) => parseInt(element));
-  ColorScheme.create({
-    "name": req.body.name,
-    "creator": req.body.creator,
-    "primaryColors": primaryColors,
-    "secondaryColors": secondaryColors,
-    "tertiaryColors": tertiaryColors,
-    "elements": elements
-  })
-
-
-  console.log(req.body)
-})
+app.use("/colorschemes", require("./routes/api/colorSchemes"));
 
 app.listen(3001, () => {
   console.log("the server is running on port 3001")

@@ -7,7 +7,11 @@ function TextInput(props) {
             <label>
                 {props.text}:
             </label>
-            <input type="text" className={props.innerText} onChange={(e) => props.handler(e.target.value)} value={props.innerText} disabled={props.disabled || false}/>
+            <input type="text"
+                className={props.innerText}
+                onChange={(e) => props.handler(e.target.value)}
+                value={props.innerText}
+                disabled={props.disabled || false} />
         </div>
     );
 }

@@ -15,7 +15,7 @@ function SearchForm() {
 
     const sendReq = (e) => {    
         e.preventDefault();
-        Axios.post("http://localhost:3001/addscheme", {
+        Axios.post("http://localhost:3001/colorschemes", {
           name: schemeName,
           creator: schemeCreator,
           primaryColors: selectedColors.primaryColors,
@@ -23,7 +23,7 @@ function SearchForm() {
           tertiaryColors: selectedColors.tertiaryColors,
           primaryRanges: selectedColors.primaryRanges,
           secondaryRanges: selectedColors.secondaryRanges,
-          tertiaryColors: selectedColors.tertiaryRanges,
+          tertiaryRanges: selectedColors.tertiaryRanges,
           elements: selectedElements
         }).then(() => {
             console.log("success")
