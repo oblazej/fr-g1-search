@@ -26,6 +26,11 @@ const createNewColorScheme = async (req, res) => {
 
 };
 
+const searchColorScheme = async (req, res) => {
+    console.log(req.params)
+    console.log(query);
+}
+
 const countRange = (startAt = 0, size) => {
     return [...Array(size).keys()].map(i => i + startAt);
 };
@@ -60,4 +65,4 @@ const combineRangesAndColors = (colors, ranges) => {
     return [...combined].sort((a, b) => a - b);
 };
 
-module.exports = { createNewColorScheme };
+module.exports = { createNewColorScheme, searchColorScheme };

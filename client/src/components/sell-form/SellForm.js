@@ -40,10 +40,25 @@ function SellForm() {
       });
   }
 
+  const searchColorScheme = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    Axios.get(`http://localhost:3001/colorschemes/${primaryColor}.${secondaryColor}.${tertiaryColor}.${element}`)
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+    .then(function() {
+
+    });
+  }
+
   return (
     <form id="sell-form">
       <input type="number" min="0" onChange={(e) => { setDragonID(e.target.value) }} />
-      <button className="search-submit" onClick={loadDragonPreview}>Load the dragon</button> {isLoading ? <Loader /> : null}
+      <button className="search-submit" onClick={loadDragonPreview}>Load the dragon</button>       <button className="search-scheme-submit" onClick={searchColorScheme}>Check schemes</button>  {isLoading ? <Loader /> : null}
       <TextInput text="primary color" innerText={primaryColor} disabled={true} />
       <TextInput text="secondary color" innerText={secondaryColor} disabled={true} />
       <TextInput text="tertiary color" innerText={tertiaryColor} disabled={true} />
