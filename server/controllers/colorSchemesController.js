@@ -1,11 +1,11 @@
 const ColorScheme = require("../model/ColorScheme");
 
 const createNewColorScheme = async (req, res) => {
-    const { name, creator, primaryColors, secondaryColors, tertiaryColors, primaryRanges, secondaryRanges, tertiaryRanges, elements} = req.body;
+    const { name, creator, primaryColors, secondaryColors, tertiaryColors, primaryRanges, secondaryRanges, tertiaryRanges, elements } = req.body;
 
-    if(!name || !creator) return res.status(400).json({"message": "Scheme name and creator name are required"});
+    if (!name || !creator) return res.status(400).json({ "message": "Scheme name and creator name are required" });
 
-    if(primaryColors.length === 0 && secondaryColors.length === 0 && tertiaryColors.length === 0 && primaryRanges.length === 0 && secondaryRanges.length === 0 && tertiaryRanges.length === 0) return res.status(400).json({"message": "No colors were selected"})
+    if (primaryColors.length === 0 && secondaryColors.length === 0 && tertiaryColors.length === 0 && primaryRanges.length === 0 && secondaryRanges.length === 0 && tertiaryRanges.length === 0) return res.status(400).json({ "message": "No colors were selected" })
 
     try {
         const result = await ColorScheme.create({
@@ -18,17 +18,25 @@ const createNewColorScheme = async (req, res) => {
         });
 
         console.log(result);
-        res.status(201).json({"success": `New scheme ${name} was created!`})
+        res.status(201).json({ "success": `New scheme ${name} was created!` })
 
     } catch (err) {
-        res.status(500).json({"message": err.message});
+        res.status(500).json({ "message": err.message });
     }
 
 };
 
 const searchColorScheme = async (req, res) => {
-    console.log(req.params)
+    const { primaryColor, secondaryColor, tertiaryColor, element } = req.params;
+    let query = await ColorScheme.find({
+        $and: [
+            { $or: [{ primaryColors: parseInt(primaryColor) }, { primaryColors: { $size: 0 } }] },
+            { $or: [{ secondaryColors: parseInt(secondaryColor) }, { secondaryColors: { $size: 0 } }] },
+            { $or: [{ tertiaryColors: parseInt(tertiaryColor) }, { tertiaryColors: { $size: 0 } }] },
+            { $or: [{ elements: parseInt(element) }, { elements: { $size: 0 } }] }]
+    }).exec();
     console.log(query);
+    res.json({ "message": query });
 }
 
 const countRange = (startAt = 0, size) => {

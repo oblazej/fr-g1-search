@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import PreviewBox from "../../components/preview-box/PreviewBox";
 import SellForm from '../../components/sell-form/SellForm';
 
-//should this section autofill?
 function Sell() {
     return (
       <motion.div id="search-div"

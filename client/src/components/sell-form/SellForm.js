@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { addValue } from "../../features/SoldDragon";
 import Loader from "../loader/Loader";
 import Axios from "axios";
+import colors from "../../constants/colors-map";
+import elements from "../../constants/elements-map";
 
 function SellForm() {
   const dispatch = useDispatch();
@@ -14,6 +16,8 @@ function SellForm() {
   const [tertiaryColor, setTertiaryColor] = useState("");
   const [element, setElement] = useState("");
   const [sex, setSex] = useState("");
+  const [price, setPrice] = useState("");
+  const [owner, setOwner] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const loadDragonPreview = (e) => {
@@ -28,7 +32,7 @@ function SellForm() {
         setTertiaryColor(response.data.bio[2]);
         setElement(response.data.bio[5]);
         setSex(response.data.sex);
-        dispatch(addValue({type: "img", val: `https://www1.flightrising.com${response.data.img}`}));
+        dispatch(addValue({ type: "img", val: `https://www1.flightrising.com${response.data.img}` }));
       })
       .catch(function (error) {
         // handle error
@@ -43,29 +47,57 @@ function SellForm() {
   const searchColorScheme = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    Axios.get(`http://localhost:3001/colorschemes/${primaryColor}.${secondaryColor}.${tertiaryColor}.${element}`)
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    })
-    .then(function() {
+    Axios.get(`http://localhost:3001/colorschemes/${colors[primaryColor]}.${colors[secondaryColor]}.${colors[tertiaryColor]}.${elements[element]}`)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+      .then(function () {
+        setIsLoading(false);
+      });
+  }
 
-    });
+  const sellDragon = (e) => {
+    e.preventDefault();
+    Axios.post("http://localhost:3001/dragons", {
+      id: dragonID,
+      owner: owner,
+      price: price,
+      sex: sex,
+      primaryColor: colors[primaryColor],
+      secondaryColor: colors[secondaryColor],
+      tertiaryColor: colors[tertiaryColor],
+      element: elements[element]
+    }).then(() => {
+        console.log("success")
+    })
   }
 
   return (
     <form id="sell-form">
-      <input type="number" min="0" onChange={(e) => { setDragonID(e.target.value) }} />
-      <button className="search-submit" onClick={loadDragonPreview}>Load the dragon</button>       <button className="search-scheme-submit" onClick={searchColorScheme}>Check schemes</button>  {isLoading ? <Loader /> : null}
+      <h2 className="search-form-title">Fill in:</h2>
+      <div className="text-input">
+      <label>ID:</label>
+  <input type="number" min="0" onChange={(e) => { setDragonID(e.target.value) }} />
+  </div>
+      <button className="search-submit" onClick={loadDragonPreview}>Load the dragon</button>
+      <button className="search-submit" onClick={searchColorScheme}>Check schemes</button>  {isLoading ? <Loader /> : null}
+      <div className="sell-dragon">
       <TextInput text="primary color" innerText={primaryColor} disabled={true} />
-      <TextInput text="secondary color" innerText={secondaryColor} disabled={true} />
-      <TextInput text="tertiary color" innerText={tertiaryColor} disabled={true} />
+        <TextInput text="secondary color" innerText={secondaryColor} disabled={true} />
+        <TextInput text="tertiary color" innerText={tertiaryColor} disabled={true} />
+        </div>
+        <div className="sell-dragon">
+        <TextInput text="price" handler={setPrice}/>
       <TextInput text="element" innerText={element} disabled={true} />
       <TextInput text="sex" innerText={sex} disabled={true} />
-      <TextInput text="price" />
-      <TextInput text="Your IGN" />
+      </div>
+      <div className="sell-owner">
+      <TextInput text="Your IGN" handler={setOwner}/>
+      </div>
+      <button className="search-submit" onClick={sellDragon}>Submit</button>
     </form>
   )
 }

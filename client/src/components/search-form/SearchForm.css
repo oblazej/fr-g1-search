@@ -1,5 +1,6 @@
 .single-color-selection-div,
-.color-range-selection-div {
+.color-range-selection-div,
+.sell-dragon {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -10,11 +11,19 @@
 
 select, input {
     display: block;
-    width: 100%;
     margin-top: 0.1rem;
+    width: 150px;
     color: white;
     background-color: rgb(35, 15, 61);
     border: 1px solid rgb(118, 118, 118);
+}
+
+.element-and-information input {
+    width: 100%;
+}
+
+.element-and-information select {
+    width: 100%;
 }
 
 label {
@@ -73,4 +82,12 @@ a:hover {
     border: 1px dashed cyan;
     padding: 0.5rem 1rem;
     margin: 0.5rem;
+}
+
+#sell-form {
+    margin-bottom: 11.7rem;
+}
+
+.sell-owner input {
+    width: 100%;
 }

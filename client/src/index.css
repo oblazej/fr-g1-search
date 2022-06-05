@@ -51,18 +51,15 @@ h2 {
 
 @media all and (max-width: 700px) {
   
-  .single-color-selection-div, .color-range-selection-div, .element-and-information {
+  .single-color-selection-div, .color-range-selection-div, .element-and-information, .sell-dragon {
     flex-direction: column;
     width: 67vw;
   }
 
-  /* input, select {
-    width: inherit;
-  } */
-
   .element-and-information {
     justify-content: center;
   }
+
 }
 
 @media all and (max-width: 1000px) {
@@ -75,6 +72,10 @@ h2 {
     align-items: center;
   }
   
+  input, select {
+    width: 100%;
+  }
+
 }
 
 @media all and (min-width: 701px) {

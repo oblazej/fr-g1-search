@@ -1,5 +1,6 @@
 const axios = require('axios');
 const jsdom = require("jsdom");
+const Dragon = require('../model/Dragon');
 
 const loadDragon = async (req, res) => {
     await axios
@@ -19,8 +20,34 @@ const loadDragon = async (req, res) => {
             res.json({ bio: dragonBio, img: dragonImage, sex: dragonSex });
         })
         .catch(error => {
+            res.status(400).json({ "message": "This dragon is a deity or doesn't exist!" });
             console.error(error);
         });
 }
 
-module.exports = { loadDragon };
+
+const addDragon = async (req, res) => {
+    const { id, owner, price, sex, primaryColor, secondaryColor, tertiaryColor, element } = req.body;
+
+    try {
+        const result = await Dragon.create({
+            "id": parseInt(id),
+            "owner": owner,
+            "price": price,
+            "sex": sex,
+            "primaryColor": parseInt(primaryColor),
+            "secondaryColor": parseInt(secondaryColor),
+            "tertiaryColor": parseInt(tertiaryColor),
+            "element": parseInt(element)
+        });
+
+        console.log(result);
+        res.status(201).json({ "success": `Dragon was added to the database!` })
+
+    } catch (err) {
+        res.status(500).json({ "message": err.message });
+    }
+
+};
+
+module.exports = { loadDragon, addDragon };
