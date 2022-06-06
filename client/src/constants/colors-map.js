@@ -175,7 +175,7 @@ const colors = {
     "Pink": 173,
     "Bubblegum": 174,
     "Rose": 175,
-    "Pear": 176
+    "Pearl": 176
 }
 
 export default colors;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 
 function Home() {
@@ -15,7 +16,7 @@ function Home() {
       <div className='bordered'></div>
       <div className='bordered'></div>
       </div>
-      <p>show all</p>
+      <Link to="/dragons">show all</Link>
 
       <h2 className='main-title'>Recently added schemes:</h2>
       <div className='bordered-main'>
@@ -25,7 +26,7 @@ function Home() {
       <div className='bordered'></div>
       <div className='bordered'></div>
       </div>
-      <p>show all</p>
+      <Link to="/schemes">show all</Link>
     </motion.div>
   );
 }

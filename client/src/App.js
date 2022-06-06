@@ -14,11 +14,13 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <div id="app">
+          <div className="fixed-height">
           <Header />
           <Navbar />
           <main>
             <AnimatedRoutes />
           </main>
+          </div>
           <Footer />
         </div>
       </BrowserRouter>

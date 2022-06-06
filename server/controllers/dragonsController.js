@@ -50,4 +50,11 @@ const addDragon = async (req, res) => {
 
 };
 
-module.exports = { loadDragon, addDragon };
+const getAllDragons = async (req, res) => {
+    const dragons = await Dragon.find();
+    if(!dragons) return res.status(204).json({"message": "No dragons found."});
+    console.log(dragons);
+    res.json(dragons);
+}
+
+module.exports = { loadDragon, addDragon, getAllDragons };

@@ -3,7 +3,8 @@ const router = express.Router();
 const dragonsController = require("../../controllers/dragonsController");
 
 router.route("/")
-    .post(dragonsController.addDragon);
+    .post(dragonsController.addDragon)
+    .get(dragonsController.getAllDragons);
 
 router.route("/load/:id")
     .get(dragonsController.loadDragon);

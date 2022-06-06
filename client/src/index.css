@@ -5,6 +5,14 @@
   padding: 0;
 }
 
+#app {
+  min-height: 100vh;
+}
+
+.fixed-height {
+  min-height: calc(100vh - 37px);
+}
+
 body {
   font-family: 'Varela Round', sans-serif;
   color: white;
@@ -84,3 +92,4 @@ h2 {
 }
 
 }
+
