@@ -51,10 +51,17 @@ const addDragon = async (req, res) => {
 };
 
 const getAllDragons = async (req, res) => {
-    const dragons = await Dragon.find();
+    const dragons = await Dragon.find().sort({_id: -1});
     if(!dragons) return res.status(204).json({"message": "No dragons found."});
     console.log(dragons);
     res.json(dragons);
 }
 
-module.exports = { loadDragon, addDragon, getAllDragons };
+const getDragon = async (req, res) => {
+    const dragon = await Dragon.find({id: parseInt(req.params.id)});
+    if(!dragon) return res.status(204).json({"message": "No dragons found."});
+    console.log(dragon);
+    res.json(dragon);
+}
+
+module.exports = { loadDragon, addDragon, getAllDragons, getDragon };

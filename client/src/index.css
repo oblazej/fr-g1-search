@@ -49,6 +49,14 @@ h2 {
   text-align: center;
 }
 
+a:link {
+  color: white;
+}
+
+a:hover {
+  color: cyan;
+}
+
 .main-title {
   margin: 1rem;
   padding: 1rem;

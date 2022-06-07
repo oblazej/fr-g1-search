@@ -1,0 +1,23 @@
+.all-dragons-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    padding: 1rem 0;
+}
+
+.dragons-list-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.wrapper {
+    display: grid;
+    place-items: center;
+}

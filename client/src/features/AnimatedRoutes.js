@@ -10,6 +10,7 @@ import Sell from "../routes/sell/Sell";
 import Search from "../routes/search/Search";
 import Schemes from "../routes/schemes/Schemes";
 import Dragons from "../routes/dragons/Dragons";
+import DragonDisplay from "../components/dragon-display/DragonDisplay";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -21,6 +22,7 @@ function AnimatedRoutes() {
                 <Route path="search" element={<Search />} />
                 <Route path="schemes" element={<Schemes />} />
                 <Route path="dragons" element={<Dragons />} />
+                <Route path="dragons/:id" element={<DragonDisplay />}/>
             </Routes>
             </AnimatePresence>
     )

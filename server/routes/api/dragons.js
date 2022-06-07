@@ -6,6 +6,10 @@ router.route("/")
     .post(dragonsController.addDragon)
     .get(dragonsController.getAllDragons);
 
+router.route("/:id")
+    .get(dragonsController.getDragon);
+
+
 router.route("/load/:id")
     .get(dragonsController.loadDragon);
 
