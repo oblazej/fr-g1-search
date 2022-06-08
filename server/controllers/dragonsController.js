@@ -25,6 +25,20 @@ const loadDragon = async (req, res) => {
         });
 }
 
+const loadDragonImage = async (req, res) => {
+    await axios
+        .get(`https://www1.flightrising.com/dragon/${req.params.id}`)
+        .then(response => {
+            let doc = new jsdom.JSDOM(response.data);
+            let dragonImage = [...doc.window.document.querySelector("#dragon-profile-dragon-frame").childNodes][1].src;
+            res.json({ img: dragonImage });
+        })
+        .catch(error => {
+            res.status(400).json({ "message": "This dragon is a deity or doesn't exist!" });
+            console.error(error);
+        });
+}
+
 
 const addDragon = async (req, res) => {
     const { id, owner, price, sex, primaryColor, secondaryColor, tertiaryColor, element } = req.body;
@@ -64,4 +78,4 @@ const getDragon = async (req, res) => {
     res.json(dragon);
 }
 
-module.exports = { loadDragon, addDragon, getAllDragons, getDragon };
+module.exports = { loadDragon, addDragon, getAllDragons, getDragon, loadDragonImage };

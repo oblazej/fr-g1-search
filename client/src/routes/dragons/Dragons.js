@@ -23,7 +23,7 @@ function Dragons() {
   if (dragonStatus === 'loading') {
     content = <Loader />
   } else if (dragonStatus === 'succeeded') {
-    let trim = dragons.dragons.slice(0, 8);
+    let trim = dragons.dragons.slice(0, 12);
     content = trim.map(drag => (
       <ListPreviewBox key={drag.id} id={drag.id}/>
     ))
