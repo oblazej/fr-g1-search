@@ -1,4 +1,3 @@
-import React from "react";
 import { 
     Routes,
     Route,
@@ -11,6 +10,7 @@ import Search from "../routes/search/Search";
 import Schemes from "../routes/schemes/Schemes";
 import Dragons from "../routes/dragons/Dragons";
 import DragonDisplay from "../components/dragon-display/DragonDisplay";
+import SchemeDisplay from "../components/scheme-display/SchemeDisplay";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -23,6 +23,7 @@ function AnimatedRoutes() {
                 <Route path="schemes" element={<Schemes />} />
                 <Route path="dragons" element={<Dragons />} />
                 <Route path="dragons/:id" element={<DragonDisplay />}/>
+                <Route path="schemes/:id" element={<SchemeDisplay />}/>
             </Routes>
             </AnimatePresence>
     )

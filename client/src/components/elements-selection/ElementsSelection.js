@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import ElementInput from '../../components/element-input/ElementInput';
 import SelectedElement from "../selected-element/SelectedElement";

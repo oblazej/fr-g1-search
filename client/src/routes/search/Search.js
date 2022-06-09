@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from "framer-motion";
 import PreviewBox from '../../components/preview-box/PreviewBox';
 import SearchForm from '../../components/search-form/SearchForm';
@@ -13,7 +12,7 @@ function Search() {
       exit={{ opacity: 0 }}>
       <h2 className="search-title">Add a color scheme</h2>
       <div className="flexit">
-        <PreviewBox />
+        <PreviewBox title="Preview" />
         <SearchForm />
       </div>
     </motion.div>

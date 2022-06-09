@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { addElement } from "../../features/SelectedElements";
 import elements from "../../constants/elements";

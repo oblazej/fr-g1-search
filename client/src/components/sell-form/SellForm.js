@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TextInput from "../../components/text-input/TextInput";
 import { useDispatch } from "react-redux";
 import { addValue } from "../../features/SoldDragon";

@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import colors from "../../constants/colors";
 import SelectedColor from "../selected-color/SelectedColor";

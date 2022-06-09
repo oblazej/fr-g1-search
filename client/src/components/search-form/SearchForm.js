@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useSelector } from "react-redux";
 import SingleColorSelection from '../../components/single-color-selection/SingleColorSelection';
 import ElementsSelection from '../elements-selection/ElementsSelection';

@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectAllDragons, fetchDragons } from '../../features/Dragons';
+import { selectAllSchemes, fetchSchemes } from '../../features/Schemes';
 import Loader from '../../components/loader/Loader';
 import ListPreviewBox from '../../components/list-preview-box/ListPreviewBox';
 import { Link } from "react-router-dom";
@@ -11,27 +12,44 @@ function Home() {
   const dispatch = useDispatch();
   const dragons = useSelector(selectAllDragons);
   const dragonStatus = useSelector(state => state.dragons.status);
-  const error = useSelector(state => state.dragons.error)
+  const dragonError = useSelector(state => state.dragons.error);
+  const schemes = useSelector(selectAllSchemes);
+  const schemesStatus = useSelector(state => state.schemes.status);
+  const schemesError = useSelector(state => state.schemes.error);
 
   useEffect(() => {
     if (dragonStatus === "idle") {
       dispatch(fetchDragons())
     }
-  }, [dragonStatus, dispatch])
+    if (schemesStatus === "idle") {
+      dispatch(fetchSchemes())
+    }
+  }, [schemesStatus, dispatch])
 
-  let content;
+  let dragonsList;
+  let schemesList;
 
   if (dragonStatus === 'loading') {
-    content = <Loader />
+    dragonsList = <Loader />
   } else if (dragonStatus === 'succeeded') {
     let trim = dragons.dragons.slice(0, 4);
-    content = trim.map(drag => (
-      <ListPreviewBox key={drag.id} id={drag.id}/>
+    dragonsList = trim.map(drag => (
+      <ListPreviewBox type="dragons" key={drag.id} id={drag.id}/>
     ))
   } else if (dragonStatus === 'failed') {
-    content = <div>{error}</div>
+    dragonsList = <div>{dragonError}</div>
   }
 
+  if (schemesList === 'loading') {
+    schemesList = <Loader />
+  } else if (schemesStatus === 'succeeded') {
+    let trim = schemes.schemes.slice(0, 4);
+    schemesList = trim.map(drag => (
+      <ListPreviewBox type="schemes" key={drag.id} id={drag.id}/>
+    ))
+  } else if (schemesStatus === 'failed') {
+    schemesList = <div>{schemesError}</div>
+  }
 
   return (
     <motion.div id="app-div"
@@ -40,13 +58,13 @@ function Home() {
       exit={{ opacity: 0 }}>
       <h2 className='main-title'>Recently added dragons:</h2>
       <div className='recent-dragons'>
-      {content ? content : <div className="no-schemes"><p>There are no dragons to show.</p></div>}
+      {dragonsList ? dragonsList : <div className="no-schemes"><p>There are no dragons to show.</p></div>}
       </div>
       <Link to="/dragons">show all</Link>
 
       <h2 className='main-title'>Recently added schemes:</h2>
       <div className="recent-dragons">
-      {content ? content : <div className="no-schemes"><p>There are no dragons to show.</p></div>}
+      {schemesList ? schemesList : <div className="no-schemes"><p>There are no schemes to show.</p></div>}
       </div>
       <Link to="/schemes">show all</Link>
     </motion.div>

@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
-import Axios from 'axios';
+import Axios from "axios";
 import colors from "../../constants/colors";
 import elements from "../../constants/elements";
-import PreviewBox from '../preview-box/PreviewBox';
-import Loader from '../loader/Loader';
+import PreviewBox from "../preview-box/PreviewBox";
+import DragonDisplayColor from "./dragon-display-color/DragonDisplayColor";
+import DragonDisplayText from "./dragon-display-text/DragonDisplayText";
+import Loader from "../loader/Loader";
 
 function DragonDisplay() {
     const { id } = useParams();
@@ -38,18 +40,17 @@ function DragonDisplay() {
                 console.log(error);
             })
             .then(function () {
-                // always executed
-            });
-        Axios.get(`http://localhost:3001/dragons/img/${id}`)
-            .then(function (response) {
-                setImg(`https://www1.flightrising.com${response.data.img}`)
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed
+                Axios.get(`http://localhost:3001/dragons/img/${id}`)
+                .then(function (response) {
+                    setImg(`https://www1.flightrising.com${response.data.img}`)
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
+                });
             });
     }, [id, img]);
 
@@ -58,15 +59,19 @@ function DragonDisplay() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}>
+                           <h2 className="search-title"> <a href={`https://www1.flightrising.com/dragon/${id}`}>#{dragonID}</a></h2>
+                            <div className="flexit">
                 <PreviewBox dragonImage={img}/>
-            <h2>#{dragonID}</h2>
-            <div className={primaryColor}>{primaryColor}</div>
-            <div className={secondaryColor}>{secondaryColor}</div>
-            <div className={tertiaryColor}>{tertiaryColor}</div>
-            <p>{element}</p>
-            <p>{sex}</p>
-            <p>{price}</p>
-            <p>{owner}</p>
+            <div className="dragon-description">
+            <DragonDisplayColor color={primaryColor} description="primary color:"/>
+            <DragonDisplayColor color={secondaryColor} description="secondary color:"/>
+            <DragonDisplayColor color={tertiaryColor} description="tertiary color:"/>
+            <DragonDisplayText text={element} description="element:" />
+            <DragonDisplayText text={sex} description="sex:" />
+            <DragonDisplayText text={price} description="price:" />
+            <DragonDisplayText text={owner} description="owner:" />
+            </div>
+            </div>
         </motion.div>
     );
 }

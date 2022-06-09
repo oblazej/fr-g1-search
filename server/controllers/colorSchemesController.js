@@ -8,7 +8,10 @@ const createNewColorScheme = async (req, res) => {
     if (primaryColors.length === 0 && secondaryColors.length === 0 && tertiaryColors.length === 0 && primaryRanges.length === 0 && secondaryRanges.length === 0 && tertiaryRanges.length === 0) return res.status(400).json({ "message": "No colors were selected" })
 
     try {
+        let latestId = await ColorScheme.findOne().sort({"_id": -1}).limit(1);
+
         const result = await ColorScheme.create({
+            "id": latestId.id === null ? 0 : latestId.id + 1,
             "name": name,
             "creator": creator,
             "primaryColors": combineRangesAndColors(parseData(primaryColors), parseRanges(primaryRanges)),
@@ -37,6 +40,20 @@ const searchColorScheme = async (req, res) => {
     }).exec();
     console.log(query);
     res.json({ "message": query });
+}
+
+const getAllColorSchemes = async (req, res) => {
+    const schemes = await ColorScheme.find().sort({_id: -1});
+    if(!schemes) return res.status(204).json({"message": "No schemes found."});
+    console.log(schemes);
+    res.json(schemes);
+}
+
+const getColorScheme = async (req, res) => {
+    const scheme = await ColorScheme.find({id: parseInt(req.params.id)});
+    if(!scheme) return res.status(204).json({"message": "No schemes found."});
+    console.log(scheme);
+    res.json(scheme);
 }
 
 const countRange = (startAt = 0, size) => {
@@ -73,4 +90,4 @@ const combineRangesAndColors = (colors, ranges) => {
     return [...combined].sort((a, b) => a - b);
 };
 
-module.exports = { createNewColorScheme, searchColorScheme };
+module.exports = { createNewColorScheme, searchColorScheme, getAllColorSchemes, getColorScheme };

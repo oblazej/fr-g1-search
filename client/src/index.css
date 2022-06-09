@@ -113,3 +113,46 @@ a:hover {
   }
 
 }
+
+.dragon-description {
+  background: rgba(0, 0, 0, 0.75);
+  background: linear-gradient(to right top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
+  border-radius: 5%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  margin: 2rem;
+  padding: 1rem;
+  margin-bottom: 6rem;
+}
+
+.dragon-color-div {
+  padding: 0.5rem;
+  border: 1px solid #767676;
+  margin: 0 1rem;
+  margin-top: 0.5rem;
+  width: 150px;
+}
+
+.dragon-display-color-div, .dragon-display-text-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dragon-display-color-description, .dragon-display-text-description {
+  margin: 0 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.dragon-text-div {
+  padding: 0.5rem;
+  margin: 0 1rem;
+  margin-top: 0.5rem;
+  width: 150px;
+}
+
+.scheme-display-color-div {
+  width: 50px;
+  height: 50px;
+}

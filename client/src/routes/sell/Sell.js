@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import PreviewBox from "../../components/preview-box/PreviewBox";
@@ -14,7 +13,7 @@ function Sell() {
       exit={{ opacity: 0 }}>
       <h2 className="search-title">Sell a dragon</h2>
       <div className="flexit">
-        <PreviewBox dragonImage={soldDragon}/>
+        <PreviewBox title="Preview" dragonImage={soldDragon}/>
         <SellForm />
       </div>
     </motion.div>

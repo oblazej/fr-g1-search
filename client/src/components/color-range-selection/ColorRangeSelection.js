@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addColor } from "../../features/SelectedColors";
 import ColorInput from "../color-input/ColorInput";

@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { deleteColor } from "../../features/SelectedColors";

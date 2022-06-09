@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useState } from "react";
+import { forwardRef, useImperativeHandle, useState } from "react";
 import { useDispatch } from "react-redux";
 import colors from "../../constants/colors";
 import { addColor } from "../../features/SelectedColors";

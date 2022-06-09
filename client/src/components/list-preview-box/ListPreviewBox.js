@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Axios from "axios";
 import "./ListPreviewBox.css";
@@ -9,7 +9,8 @@ function ListPreviewBox(props) {
   const [ img, setImg ] = useState("");
 
   useEffect(() => {
-    Axios.get(`http://localhost:3001/dragons/img/${props.id}`)
+    if(props.type === "dragons") {
+      Axios.get(`http://localhost:3001/dragons/img/${props.id}`)
       .then(function (response) {
         setImg(`https://www1.flightrising.com${response.data.img}`)
       })
@@ -20,11 +21,13 @@ function ListPreviewBox(props) {
       .then(function () {
         // always executed
       });
-  }, []);
+    }
+    
+  }, [props.type]);
 
 
   return (
-    <Link to={`/dragons/${props.id}`}><div className="list-preview-frame">
+    <Link to={`/${props.type}/${props.id}`}><div className="list-preview-frame">
       <img className="list-preview-image" src={img ? img : dragon_placeholder} alt="dragon placeholder" />
       <p>#{props.id}</p>
     </div>
