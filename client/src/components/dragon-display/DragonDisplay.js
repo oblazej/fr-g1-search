@@ -40,17 +40,17 @@ function DragonDisplay() {
                 console.log(error);
             })
             .then(function () {
-                Axios.get(`http://localhost:3001/dragons/img/${id}`)
-                .then(function (response) {
-                    setImg(`https://www1.flightrising.com${response.data.img}`)
-                })
-                .catch(function (error) {
-                    // handle error
-                    console.log(error);
-                })
-                .then(function () {
-                    // always executed
-                });
+                // Axios.get(`http://localhost:3001/dragons/img/${id}`)
+                // .then(function (response) {
+                //     setImg(`https://www1.flightrising.com${response.data.img}`)
+                // })
+                // .catch(function (error) {
+                //     // handle error
+                //     console.log(error);
+                // })
+                // .then(function () {
+                //     // always executed
+                // });
             });
     }, [id, img]);
 

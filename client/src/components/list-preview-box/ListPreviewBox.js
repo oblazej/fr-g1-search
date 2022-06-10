@@ -8,22 +8,22 @@ function ListPreviewBox(props) {
 
   const [ img, setImg ] = useState("");
 
-  useEffect(() => {
-    if(props.type === "dragons") {
-      Axios.get(`http://localhost:3001/dragons/img/${props.id}`)
-      .then(function (response) {
-        setImg(`https://www1.flightrising.com${response.data.img}`)
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .then(function () {
-        // always executed
-      });
-    }
+  // useEffect(() => {
+  //   if(props.type === "dragons") {
+  //     Axios.get(`http://localhost:3001/dragons/img/${props.id}`)
+  //     .then(function (response) {
+  //       setImg(`https://www1.flightrising.com${response.data.img}`)
+  //     })
+  //     .catch(function (error) {
+  //       // handle error
+  //       console.log(error);
+  //     })
+  //     .then(function () {
+  //       // always executed
+  //     });
+  //   }
     
-  }, [props.type]);
+  // }, [props.type]);
 
 
   return (

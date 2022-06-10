@@ -25,9 +25,9 @@ function SchemeDisplay() {
                 const scheme = response.data[0];
                 setName(scheme.name);
                 setCreator(scheme.creator);
-                setPrimaryColors(scheme.primaryColors.map((color) => colors[color][1]));
-                setSecondaryColors(scheme.secondaryColors.map((color) => colors[color][1]));
-                setTertiaryColors(scheme.tertiaryColors.map((color) => colors[color][1]));
+                setPrimaryColors(scheme.primaryColors.map((color) => <SchemeDisplayColor color={colors[color][1]} key={colors[color][1]}/>));
+                setSecondaryColors(scheme.secondaryColors.map((color) => <SchemeDisplayColor color={colors[color][1]} key={colors[color][1]}/>));
+                setTertiaryColors(scheme.tertiaryColors.map((color) => <SchemeDisplayColor color={colors[color][1]} key={colors[color][1]}/>));
                 setSchemeElements(scheme.elements.map((element) => elements[element - 1][1]));
             })
             .catch(function (error) {
@@ -35,7 +35,6 @@ function SchemeDisplay() {
                 console.log(error);
             })
             .then(function () {
-             
             });
     }, [id]);
 
@@ -45,11 +44,19 @@ function SchemeDisplay() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}>
             <h2 className="search-title">#{id}</h2>
-            <p>{name}</p>
-            <p>{creator}</p>
-            <p>{secondaryColors}</p>
-            <p>{tertiaryColors}</p>
-            <p>{schemeElements}</p>
+            <div className="flexit">
+            <PreviewBox />
+            <div className="column">
+            <p>Name: {name}</p>
+            <p>Creator: {creator}</p>
+            <h2>Primary colors:</h2>
+            <div className="testit">{primaryColors}</div>
+            <h2>Secondary colors:</h2>
+            <div className="testit">{secondaryColors}</div>
+            <h2>Tertiary colors:</h2>
+            <div className="testit">{tertiaryColors}</div>
+            </div>
+            </div>
         </motion.div>
     )
 }
