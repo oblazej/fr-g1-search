@@ -157,7 +157,7 @@ a:hover {
 .scheme-display-color-div {
   min-width: 1rem;
   min-height: 1rem;
-  border: 1px solid #767676;
+  border: 1px solid rgb(96, 41, 167);
   margin: 1px;
 }
 
@@ -172,7 +172,9 @@ a:hover {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  width: 20vw;
+  max-width: 23.4vw;
+  padding: 0.5rem 1rem;
+  padding-bottom: 1rem;
 }
 
 .column {
@@ -187,7 +189,22 @@ a:hover {
   border-radius: 5%;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  margin: 0.5rem 2rem;
-  padding: 1rem;
+  margin: 3rem 2rem;
+  padding: 1.5rem;
   margin-bottom: 6rem;
+}
+
+.scheme-header {
+  font-size: 1.5rem;
+  margin: 0.5rem 0.5rem;
+}
+
+strong {
+  color: cyan;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.scheme-name {
+  margin-bottom: 1rem;
 }

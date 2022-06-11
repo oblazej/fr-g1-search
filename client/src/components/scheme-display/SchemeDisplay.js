@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import Axios from "axios";
-import colors from "../../constants/colors";
 import elements from "../../constants/elements";
+import colors from "../../constants/colors";
 import SchemeDisplayColor from "./scheme-display-color/SchemeDisplayColor";
+import SchemeDisplayColors from "./scheme-display-colors/SchemeDisplayColors";
 import PreviewBox from "../preview-box/PreviewBox";
 import Loader from "../loader/Loader";
 
@@ -45,16 +46,12 @@ function SchemeDisplay() {
         exit={{ opacity: 0 }}>
             <h2 className="search-title">#{id}</h2>
             <div className="flexit">
-            <PreviewBox />
+            <PreviewBox title="Preview"/>
             <div className="column">
-            <p>Name: {name}</p>
-            <p>Creator: {creator}</p>
-            <h2>Primary colors:</h2>
-            <div className="testit">{primaryColors}</div>
-            <h2>Secondary colors:</h2>
-            <div className="testit">{secondaryColors}</div>
-            <h2>Tertiary colors:</h2>
-            <div className="testit">{tertiaryColors}</div>
+            <h2 className="scheme-name"><strong>{name}</strong> created by <strong>{creator}</strong></h2>
+            <SchemeDisplayColors title="primary colors:" colors={primaryColors} />
+            <SchemeDisplayColors title="secondary colors:" colors={secondaryColors} />
+            <SchemeDisplayColors title="tertiary colors:" colors={tertiaryColors} />
             </div>
             </div>
         </motion.div>
