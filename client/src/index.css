@@ -66,6 +66,20 @@ a:hover {
 }
 
 
+.testit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  max-width: 23.7vw;
+  padding: 0.5rem 1rem;
+  padding-bottom: 1rem;
+}
+
+
+
 @media all and (max-width: 1000px) {
   body {
     height: 100%;
@@ -89,7 +103,7 @@ a:hover {
 
 @media all and (min-width: 701px) {
   .single-color-selection {
-    width: 100%;
+    max-width: 100%;
   }
 
 }
@@ -112,6 +126,13 @@ a:hover {
     width: 90vw;
   }
 
+}
+
+@media all and (max-width: 1300px) {
+  
+  .testit {
+    max-width: 60vw;
+  }
 }
 
 .dragon-description {
@@ -165,18 +186,6 @@ a:hover {
   border: 1px solid cyan;
 }
 
-.testit {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  max-width: 23.4vw;
-  padding: 0.5rem 1rem;
-  padding-bottom: 1rem;
-}
-
 .column {
   display: flex;
   flex-direction: column;
@@ -207,4 +216,17 @@ strong {
 
 .scheme-name {
   margin-bottom: 1rem;
+}
+
+.scheme-display-color-container {
+  position: relative;
+}
+
+.scheme-color-description {
+  position: absolute;
+  top: 1.5rem;
+  z-index: 10;
+  background-color: rgb(35, 15, 61);
+  padding: 0.5rem;
+  border: 1px solid cyan;
 }
