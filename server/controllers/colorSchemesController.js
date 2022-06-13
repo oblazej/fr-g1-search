@@ -5,7 +5,7 @@ const createNewColorScheme = async (req, res) => {
 
     if (!name || !creator) return res.status(400).json({ "message": "Scheme name and creator name are required" });
 
-    if (primaryColors.length === 0 && secondaryColors.length === 0 && tertiaryColors.length === 0 && primaryRanges.length === 0 && secondaryRanges.length === 0 && tertiaryRanges.length === 0) return res.status(400).json({ "message": "No colors were selected" })
+    if (primaryColors.length === 0 && secondaryColors.length === 0 && tertiaryColors.length === 0 && primaryRanges.length === 0 && secondaryRanges.length === 0 && tertiaryRanges.length === 0) return res.status(400).json({ "message": "No colors were selected" });
 
     try {
         let latestId = await ColorScheme.findOne().sort({"_id": -1}).limit(1);

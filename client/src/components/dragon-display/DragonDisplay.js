@@ -61,7 +61,7 @@ function DragonDisplay() {
             exit={{ opacity: 0 }}>
                            <h2 className="search-title"> <a href={`https://www1.flightrising.com/dragon/${id}`}>#{dragonID}</a></h2>
                             <div className="flexit">
-                <PreviewBox dragonImage={img}/>
+                <PreviewBox primaryColor={primaryColor} secondaryColor={secondaryColor} tertiaryColor={tertiaryColor} element={element}/>
             <div className="dragon-description">
             <DragonDisplayColor color={primaryColor} description="primary color:"/>
             <DragonDisplayColor color={secondaryColor} description="secondary color:"/>

@@ -34,14 +34,6 @@ form {
     margin-bottom: 6rem;
 }
 
-.preview-frame img {
-    filter: drop-shadow(0 0 5px #1a1a1a);
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-}
-
 .search-title {
     font-size: 3.5rem;
     margin: 1rem 0;

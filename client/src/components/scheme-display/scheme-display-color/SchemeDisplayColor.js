@@ -5,6 +5,7 @@ function SchemeDisplayColor(props) {
 
       const handleMouseOver = () => {
             setIsHovering(true);
+            props.setPrev(props.color);
       }
 
       const handleMouseOut = () => {

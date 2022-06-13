@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { addElement } from "../../features/SelectedElements";
 import elements from "../../constants/elements";
+import "./ElementInput.css";
 
 function ElementInput(props) {
     //try using a hook on V this

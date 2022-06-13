@@ -1,0 +1,43 @@
+.e-Earth {
+    fill: #3f352c;
+}
+
+.e-Plague {
+    fill: #b60000;
+}
+
+.e-Wind {
+    fill: #0fff9b;
+}
+
+.Water {
+    fill: #0026ff;
+}
+
+.e-Lightning {
+    fill: #00f2ff;
+}
+
+.e-Ice {
+    fill: #b0f2ff;
+}
+
+.e-Shadow {
+    fill: #7b00ff;
+}
+
+.e-Light {
+    fill: #fdff8c
+}
+
+.e-Arcane {
+    fill: rgb(189, 5, 209);
+}
+
+.e-Nature {
+    fill: rgb(2, 191, 24);
+}
+
+.e-Fire {
+    fill: rgb(255, 183, 0);
+}

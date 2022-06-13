@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import Axios from "axios";
 import elements from "../../constants/elements";
 import colors from "../../constants/colors";
-import SchemeDisplayColor from "./scheme-display-color/SchemeDisplayColor";
 import SchemeDisplayColors from "./scheme-display-colors/SchemeDisplayColors";
 import PreviewBox from "../preview-box/PreviewBox";
 import Loader from "../loader/Loader";
@@ -19,6 +18,11 @@ function SchemeDisplay() {
     const [secondaryColors, setSecondaryColors] = useState("");
     const [tertiaryColors, setTertiaryColors] = useState("");
     const [schemeElements, setSchemeElements] = useState("");
+    const [previewPrimary, setPreviewPrimary] = useState("");
+    const [previewSecondary, setPreviewSecondary] = useState("");
+    const [previewTertiary, setPreviewTertiary] = useState("");
+    const [previewElement, setPreviewElement] =  useState("");
+    const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
         Axios.get(`http://localhost:3001/colorschemes/${id}`)
@@ -26,33 +30,40 @@ function SchemeDisplay() {
                 const scheme = response.data[0];
                 setName(scheme.name);
                 setCreator(scheme.creator);
-                setPrimaryColors(scheme.primaryColors.map((color) => <SchemeDisplayColor color={colors[color][1]} key={colors[color][1]}/>));
-                setSecondaryColors(scheme.secondaryColors.map((color) => <SchemeDisplayColor color={colors[color][1]} key={colors[color][1]}/>));
-                setTertiaryColors(scheme.tertiaryColors.map((color) => <SchemeDisplayColor color={colors[color][1]} key={colors[color][1]}/>));
+                setPrimaryColors(scheme.primaryColors.map((color) => colors[color][1]));
+                setSecondaryColors(scheme.secondaryColors.map((color) => colors[color][1]));
+                setTertiaryColors(scheme.tertiaryColors.map((color) => colors[color][1]));
                 setSchemeElements(scheme.elements.map((element) => elements[element - 1][1]));
+                scheme.primaryColors.length > 0 ? setPreviewPrimary(colors[scheme.primaryColors[0]][1]) : setPreviewPrimary("Maize");
+                scheme.secondaryColors.length > 0 ? setPreviewSecondary(colors[scheme.secondaryColors[0]][1]) : setPreviewSecondary("Maize");
+                scheme.tertiaryColors.length > 0 ? setPreviewTertiary(colors[scheme.tertiaryColors[0]][1]) : setPreviewTertiary("Maize");
+                scheme.elements.length > 0 ? setPreviewElement(elements[scheme.elements[0] - 1][1]) : setPreviewElement("Light");
             })
             .catch(function (error) {
                 // handle error
                 console.log(error);
             })
             .then(function () {
+                setIsLoaded(true);
             });
     }, [id]);
 
-    return(
+    return (
         <motion.div id="dragons-div"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}>
             <h2 className="search-title">#{id}</h2>
             <div className="flexit">
-            <PreviewBox title="Preview"/>
-            <div className="column">
-            <h2 className="scheme-name"><strong>{name}</strong> created by <strong>{creator}</strong></h2>
-            <SchemeDisplayColors title="primary colors:" colors={primaryColors} />
-            <SchemeDisplayColors title="secondary colors:" colors={secondaryColors} />
-            <SchemeDisplayColors title="tertiary colors:" colors={tertiaryColors} />
-            </div>
+                <PreviewBox title="Preview" primaryColor={previewPrimary} secondaryColor={previewSecondary} tertiaryColor={previewTertiary} element={previewElement}/>
+                <div className="column">
+                    <h2 className="scheme-name"><strong>{name}</strong> created by <strong>{creator}</strong></h2>
+                    {isLoaded ? <>
+                        <SchemeDisplayColors title="primary colors:" colors={primaryColors} setPrev={setPreviewPrimary}/>
+                        <SchemeDisplayColors title="secondary colors:" colors={secondaryColors} setPrev={setPreviewSecondary}/>
+                        <SchemeDisplayColors title="tertiary colors:" colors={tertiaryColors} setPrev={setPreviewTertiary}/>
+                        {schemeElements}</> : <Loader />}
+                </div>
             </div>
         </motion.div>
     )

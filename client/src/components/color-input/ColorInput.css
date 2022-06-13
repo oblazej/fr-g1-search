@@ -1,884 +1,1062 @@
 .Maize {
     color: black;
-    background: #fffdea
+    background: #fffdea;
+    fill: #fffdea;
 }
 
 .Dust {
     color: black;
-    background: #9c9c9e
+    background: #9c9c9e;
+    fill: #9c9c9e;
 }
 
 .Moss {
     color: white;
-    background: #7e7745
+    background: #7e7745;
+    fill: #7e7745;
 }
 
 .Goldenrod {
     color: black;
-    background: #bea55d
+    background: #bea55d;
+    fill: #bea55d;
 }
 
 .Amber {
     color: black;
-    background: #c18e1b
+    background: #c18e1b;
+    fill: #c18e1b;
 }
 
 .Honey {
     color: black;
-    background: #d1b300
+    background: #d1b300;
+    fill: #d1b300;
 }
 
 .Lemon {
     color: black;
-    background: #ffe63b
+    background: #ffe63b;
+    fill: #ffe63b;
 }
 
 .Yellow {
     color: black;
-    background: #f9e255
+    background: #f9e255;
+    fill: #f9e255;
 }
 
 .Grapefruit {
     color: black;
-    background: #f7ff6f
+    background: #f7ff6f;
+    fill: #f7ff6f;
 }
 
 .Banana {
     color: black;
-    background: #ffec80
+    background: #ffec80;
+    fill: #ffec80;
 }
 
 .Sanddollar {
     color: black;
-    background: #ebe7ae
+    background: #ebe7ae;
+    fill: #ebe7ae;
 }
 
 .Flaxen {
     color: black;
-    background: #fde9ae
+    background: #fde9ae;
+    fill: #fde9ae;
 }
 
 .Grey {
     color: white;
-    background: #808080
+    background: #808080;
+    fill: #808080;
 }
 
 .Ivory {
     color: black;
-    background: #ffd297
+    background: #ffd297;
+    fill: #ffd297;
 }
 
 .Buttercup {
     color: black;
-    background: #f6bf6b
+    background: #f6bf6b;
+    fill: #f6bf6b;
 }
 
 .Gold {
     color: black;
-    background: #e8af49
+    background: #e8af49;
+    fill: #e8af49;
 }
 
 .Metals {
     color: black;
-    background: #d1b046
+    background: #d1b046;
+    fill: #d1b046;
 }
 
 .Marigold {
     color: black;
-    background: #ffb43b
+    background: #ffb43b;
+    fill: #ffb43b;
 }
 
 .Sunshine {
     color: black;
-    background: #fa912b
+    background: #fa912b;
+    fill: #fa912b;
 }
 
 .Saffron {
     color: black;
-    background: #ff8400
+    background: #ff8400;
+    fill: #ff8400;
 }
 
 .Sunset {
     color: black;
-    background: #ffa248
+    background: #ffa248;
+    fill: #ffa248;
 }
 
 .Peach {
     color: black;
-    background: #ffb576
+    background: #ffb576;
+    fill: #ffb576;
 }
 
 .Cantaloupe {
     color: black;
-    background: #ff984f
+    background: #ff984f;
+    fill: #ff984f;
 }
 
 .Smoke {
     color: black;
-    background: #9494a9
+    background: #9494a9;
+    fill: #9494a9;
 }
 
 .Orange {
     color: white;
-    background: #d5602b
+    background: #d5602b;
+    fill: #d5602b;
 }
 
 .Bronze {
     color: white;
-    background: #b2560d
+    background: #b2560d;
+    fill: #b2560d;
 }
 
 .Terracotta {
     color: white;
-    background: #b23b07
+    background: #b23b07;
+    fill: #b23b07;
 }
 
 .Carrot {
     color: black;
-    background: #ff5500
+    background: #ff5500;
+    fill: #ff5500;
 }
 
 .Fire {
     color: white;
-    background: #ef5c23
+    background: #ef5c23;
+    fill: #ef5c23;
 }
 
 .Pumpkin {
     color: black;
-    background: #ff6840
+    background: #ff6840;
+    fill: #ff6840;
 }
 
 .Tangerine {
     color: black;
-    background: #ff7360
+    background: #ff7360;
+    fill: #ff7360;
 }
 
 .Cinnamon {
     color: white;
-    background: #c05a39
+    background: #c05a39;
+    fill: #c05a39;
 }
 
 .Caramel {
     color: white;
-    background: #c67047
+    background: #c67047;
+    fill: #c67047;
 }
 
 .Sand {
     color: white;
-    background: #b27749
+    background: #b27749;
+    fill: #b27749;
 }
 
 .Gloom {
     color: white;
-    background: #535264
+    background: #535264;
+    fill: #535264;
 }
 
 .Tan {
     color: black;
-    background: #c49a70
+    background: #c49a70;
+    fill: #c49a70;
 }
 
 .Beige {
     color: black;
-    background: #cabba2
+    background: #cabba2;
+    fill: #cabba2;
 }
 
 .Stone {
     color: white;
-    background: #827a64
+    background: #827a64;
+    fill: #827a64;
 }
 
 .Taupe {
     color: white;
-    background: #6d665a
+    background: #6d665a;
+    fill: #6d665a;
 }
 
 .Slate {
     color: white;
-    background: #564d48
+    background: #564d48;
+    fill: #564d48;
 }
 
 .Driftwood {
     color: white;
-    background: #766359
+    background: #766359;
+    fill: #766359;
 }
 
 .Latte {
     color: white;
-    background: #977b6c
+    background: #977b6c;
+    fill: #977b6c;
 }
 
 .Dirt {
     color: white;
-    background: #76483f
+    background: #76483f;
+    fill: #76483f;
 }
 
 .Clay {
     color: white;
-    background: #603f3d
+    background: #603f3d;
+    fill: #603f3d;
 }
 
 .Sable {
     color: white;
-    background: #57372c
+    background: #57372c;
+    fill: #57372c;
 }
 
 .Lead {
     color: white;
-    background: #413c3f
+    background: #413c3f;
+    fill: #413c3f;
 }
 
 .Umber {
     color: white;
-    background: #2f1e1a
+    background: #2f1e1a;
+    fill: #2f1e1a;
 }
 
 .Soil {
     color: white;
-    background: #5a4534
+    background: #5a4534;
+    fill: #5a4534;
 }
 
 .Hickory {
     color: white;
-    background: #725639
+    background: #725639;
+    fill: #725639;
 }
 
 .Tarnish {
     color: white;
-    background: #855c32
+    background: #855c32;
+    fill: #855c32;
 }
 
 .Ginger {
     color: white;
-    background: #90532b
+    background: #90532b;
+    fill: #90532b;
 }
 
 .Brown {
     color: white;
-    background: #8e5b3f
+    background: #8e5b3f;
+    fill: #8e5b3f;
 }
 
 .Chocolate {
     color: white;
-    background: #563012
+    background: #563012;
+    fill: #563012;
 }
 
 .Auburn {
     color: white;
-    background: #7b3c1d
+    background: #7b3c1d;
+    fill: #7b3c1d;
 }
 
 .Copper {
     color: white;
-    background: #a44b28
+    background: #a44b28;
+    fill: #a44b28;
 }
 
 .Rust {
     color: white;
-    background: #8b3220
+    background: #8b3220;
+    fill: #8b3220;
 }
 
 .Shale {
     color: white;
-    background: #4d4850
+    background: #4d4850;
+    fill: #4d4850;
 }
 
 .Tomato {
     color: white;
-    background: #ba311c
+    background: #ba311c;
+    fill: #ba311c;
 }
 
 .Vermilion {
     color: white;
-    background: #e22d17
+    background: #e22d17;
+    fill: #e22d17;
 }
 
 .Ruby {
     color: white;
-    background: #cd000e
+    background: #cd000e;
+    fill: #cd000e;
 }
 
 .Cherry {
     color: white;
-    background: #aa0024
+    background: #aa0024;
+    fill: #aa0024;
 }
 
 .Crimson {
     color: white;
-    background: #850012
+    background: #850012;
+    fill: #850012;
 }
 
 .Garnet {
     color: white;
-    background: #5b0f14
+    background: #5b0f14;
+    fill: #5b0f14;
 }
 
 .Sanguine {
     color: white;
-    background: #2e0002
+    background: #2e0002;
+    fill: #2e0002;
 }
 
 .Blood {
     color: white;
-    background: #451717
+    background: #451717;
+    fill: #451717;
 }
 
 .Maroon {
     color: white;
-    background: #652127
+    background: #652127;
+    fill: #652127;
 }
 
 .Berry {
     color: white;
-    background: #8b272c
+    background: #8b272c;
+    fill: #8b272c;
 }
 
 .Flint {
     color: white;
-    background: #626268
+    background: #626268;
+    fill: #626268;
 }
 
 .Red {
     color: white;
-    background: #c1272d
+    background: #c1272d;
+    fill: #c1272d;
 }
 
 .Strawberry {
     color: white;
-    background: #de3235
+    background: #de3235;
+    fill: #de3235;
 }
 
 .Cerise {
     color: white;
-    background: #a22929
+    background: #a22929;
+    fill: #a22929;
 }
 
 .Carmine {
     color: white;
-    background: #b13a3a
+    background: #b13a3a;
+    fill: #b13a3a;
 }
 
 .Brick {
     color: white;
-    background: #9a534d
+    background: #9a534d;
+    fill: #9a534d;
 }
 
 .Coral {
     color: black;
-    background: #cc6f6f
+    background: #cc6f6f;
+    fill: #cc6f6f;
 }
 
 .Blush {
     color: black;
-    background: #ffa2a2
+    background: #ffa2a2;
+    fill: #ffa2a2;
 }
 
 .Cottoncandy {
     color: black;
-    background: #eb7997
+    background: #eb7997;
+    fill: #eb7997;
 }
 
 .Watermelon {
     color: black;
-    background: #db518d
+    background: #db518d;
+    fill: #db518d;
 }
 
 .Magenta {
     color: black;
-    background: #e934aa
+    background: #e934aa;
+    fill: #e934aa;
 }
 
 .Charcoal {
     color: white;
-    background: #545454
+    background: #545454;
+    fill: #545454;
 }
 
 .Fuchsia {
     color: white;
-    background: #ec0089
+    background: #ec0089;
+    fill: #ec0089;
 }
 
 .Raspberry {
     color: white;
-    background: #8a0249
+    background: #8a0249;
+    fill: #8a0249;
 }
 
 .Wine {
     color: white;
-    background: #4d0f28
+    background: #4d0f28;
+    fill: #4d0f28;
 }
 
 .Mauve {
     color: white;
-    background: #9c4875
+    background: #9c4875;
+    fill: #9c4875;
 }
 
 .Pink {
     color: black;
-    background: #e77fbf
+    background: #e77fbf;
+    fill: #e77fbf;
 }
 
 .Bubblegum {
     color: black;
-    background: #eaa9ff
+    background: #eaa9ff;
+    fill: #eaa9ff;
 }
 
 .Rose {
     color: black;
-    background: #ffd6f6
+    background: #ffd6f6;
+    fill: #ffd6f6;
 }
 
 .Pearl {
     color: black;
-    background: #fbe9f8
+    background: #fbe9f8;
+    fill: #fbe9f8;
 }
 
 .Coal {
     color: white;
-    background: #4b4946
+    background: #4b4946;
+    fill: #4b4946;
 }
 
 .Oilslick {
     color: white;
-    background: #342b25
+    background: #342b25;
+    fill: #342b25;
 }
 
 .Cream {
     color: black;
-    background: #ffefdc
+    background: #ffefdc;
+    fill: #ffefdc;
 }
 
 .Black {
     color: white;
-    background: #333333
+    background: #333333;
+    fill: #333333;
 }
 
 .Obsidian {
     color: white;
-    background: #1d2224
+    background: #1d2224;
+    fill: #1d2224;
 }
 
 .Eldritch {
     color: white;
-    background: #252a25
+    background: #252a25;
+    fill: #252a25;
 }
 
 .Midnight {
     color: white;
-    background: #252735
+    background: #252735;
+    fill: #252735;
 }
 
 .Shadow {
     color: white;
-    background: #3a2e44
+    background: #3a2e44;
+    fill: #3a2e44;
 }
 
 .Blackberry {
     color: white;
-    background: #4b294f
+    background: #4b294f;
+    fill: #4b294f;
 }
 
 .Mulberry {
     color: white;
-    background: #6e235d
+    background: #6e235d;
+    fill: #6e235d;
 }
 
 .Plum {
     color: white;
-    background: #853390
+    background: #853390;
+    fill: #853390;
 }
 
 .Wisteria {
     color: white;
-    background: #724e7b
+    background: #724e7b;
+    fill: #724e7b;
 }
 
 .Thistle {
     color: black;
-    background: #8f7c8b
+    background: #8f7c8b;
+    fill: #8f7c8b;
 }
 
 .Antique {
     color: black;
-    background: #d8d6cd
+    background: #d8d6cd;
+    fill: #d8d6cd;
 }
 
 .Fog {
     color: black;
-    background: #a593b0
+    background: #a593b0;
+    fill: #a593b0;
 }
 
 .Mist {
     color: black;
-    background: #e1ceff
+    background: #e1ceff;
+    fill: #e1ceff;
 }
 
 .Lavender {
     color: black;
-    background: #cca4e0
+    background: #cca4e0;
+    fill: #cca4e0;
 }
 
 .Heather {
     color: black;
-    background: #9777bd
+    background: #9777bd;
+    fill: #9777bd;
 }
 
 .Purple {
     color: white;
-    background: #a261cf
+    background: #a261cf;
+    fill: #a261cf;
 }
 
 .Orchid {
     color: black;
-    background: #d950ff
+    background: #d950ff;
+    fill: #d950ff;
 }
 
 .Amethyst {
     color: white;
-    background: #993bd0
+    background: #993bd0;
+    fill: #993bd0;
 }
 
 .Nightshade {
     color: white;
-    background: #782eb2
+    background: #782eb2;
+    fill: #782eb2;
 }
 
 .Violet {
     color: white;
-    background: #643f9c
+    background: #643f9c;
+    fill: #643f9c;
 }
 
 .Grape {
     color: white;
-    background: #570fc0
+    background: #570fc0;
+    fill: #570fc0;
 }
 
 .White {
     color: black;
-    background: #ffffff
+    background: #ffffff;
+    fill: #ffffff;
 }
 
 .Royal {
     color: white;
-    background: #4d2c89
+    background: #4d2c89;
+    fill: #4d2c89;
 }
 
 .Eggplant {
     color: white;
-    background: #332b65
+    background: #332b65;
+    fill: #332b65;
 }
 
 .Iris {
     color: white;
-    background: #535195
+    background: #535195;
+    fill: #535195;
 }
 
 .Storm {
     color: black;
-    background: #757adb
+    background: #757adb;
+    fill: #757adb;
 }
 
 .Twilight {
     color: white;
-    background: #474aa0
+    background: #474aa0;
+    fill: #474aa0;
 }
 
 .Indigo {
     color: white;
-    background: #2d237a
+    background: #2d237a;
+    fill: #2d237a;
 }
 
 .Sapphire {
     color: white;
-    background: #0d095b
+    background: #0d095b;
+    fill: #0d095b;
 }
 
 .Navy {
     color: white;
-    background: #212b5f
+    background: #212b5f;
+    fill: #212b5f;
 }
 
 .Cobalt {
     color: white;
-    background: #003484
+    background: #003484;
+    fill: #003484;
 }
 
 .Ultramarine {
     color: white;
-    background: #1c51e7
+    background: #1c51e7;
+    fill: #1c51e7;
 }
 
 .Moon {
     color: black;
-    background: #d8d7d8
+    background: #d8d7d8;
+    fill: #d8d7d8;
 }
 
 .Blue {
     color: white;
-    background: #324ba9
+    background: #324ba9;
+    fill: #324ba9;
 }
 
 .Periwinkle {
     color: white;
-    background: #4866d5
+    background: #4866d5;
+    fill: #4866d5;
 }
 
 .Lapis {
     color: white;
-    background: #2b84ff
+    background: #2b84ff;
+    fill: #2b84ff;
 }
 
 .Splash {
     color: black;
-    background: #6392df
+    background: #6392df;
+    fill: #6392df;
 }
 
 .Cornflower {
     color: black;
-    background: #75a8ff
+    background: #75a8ff;
+    fill: #75a8ff;
 }
 
 .Sky {
     color: black;
-    background: #aec8ff
+    background: #aec8ff;
+    fill: #aec8ff;
 }
 
 .Stonewash {
     color: black;
-    background: #7895c1
+    background: #7895c1;
+    fill: #7895c1;
 }
 
 .Overcast {
     color: white;
-    background: #444f69
+    background: #444f69;
+    fill: #444f69;
 }
 
 .Steel {
     color: white;
-    background: #556979
+    background: #556979;
+    fill: #556979;
 }
 
 .Denim {
     color: white;
-    background: #2f4557
+    background: #2f4557;
+    fill: #2f4557;
 }
 
 .Ice {
     color: black;
-    background: #ebefff
+    background: #ebefff;
+    fill: #ebefff;
 }
 
 .Abyss {
     color: white;
-    background: #0d1e24
+    background: #0d1e24;
+    fill: #0d1e24;
 }
 
 .Phthalo {
     color: white;
-    background: #0b2d46
+    background: #0b2d46;
+    fill: #0b2d46;
 }
 
 .Azure {
     color: white;
-    background: #0a3d67
+    background: #0a3d67;
+    fill: #0a3d67;
 }
+
 
 .Caribbean {
     color: white;
-    background: #0086ce
+    background: #0086ce;
+    fill: #0086ce;
 }
 
 .Teal {
     color: white;
-    background: #2b768f
+    background: #2b768f;
+    fill: #2b768f;
 }
 
 .Cerulean {
     color: white;
-    background: #00b4d6
+    background: #00b4d6;
+    fill: #00b4d6;
 }
 
 .Cyan {
     color: black;
-    background: #00fff0
+    background: #00fff0;
+    fill: #00fff0;
 }
 
 .Robin {
     color: black;
-    background: #9aeaef
+    background: #9aeaef;
+    fill: #9aeaef;
 }
 
 .Aqua {
     color: black;
-    background: #72c4c4
+    background: #72c4c4;
+    fill: #72c4c4;
 }
 
 .Turquoise {
     color: white;
-    background: #3aa0a1
+    background: #3aa0a1;
+    fill: #3aa0a1;
 }
 
 .Orca {
     color: black;
-    background: #e0dfff
+    background: #e0dfff;
+    fill: #e0dfff;
 }
 
 .Spruce {
     color: black;
-    background: #8bbbb2
+    background: #8bbbb2;
+    fill: #8bbbb2;
 }
 
 .Pistachio {
     color: black;
-    background: #e2ffe6
+    background: #e2ffe6;
+    fill: #e2ffe6;
 }
 
 .Seafoam {
     color: black;
-    background: #b2e2bd
+    background: #b2e2bd;
+    fill: #b2e2bd;
 }
 
 .Mint {
     color: black;
-    background: #9affc7
+    background: #9affc7;
+    fill: #9affc7;
 }
 
 .Jade {
     color: white;
-    background: #61ab89
+    background: #61ab89;
+    fill: #61ab89;
 }
 
 .Spearmint {
     color: white;
-    background: #148e67
+    background: #148e67;
+    fill: #148e67;
 }
 
 .Thicket {
     color: white;
-    background: #005e48
+    background: #005e48;
+    fill: #005e48;
 }
 
 .Peacock {
     color: white;
-    background: #1f4739
+    background: #1f4739;
+    fill: #1f4739;
 }
 
 .Emerald {
     color: white;
-    background: #20603f
+    background: #20603f;
+    fill: #20603f;
 }
 
 .Shamrock {
     color: white;
-    background: #236925
+    background: #236925;
+    fill: #236925;
 }
 
 .Platinum {
     color: black;
-    background: #c8bece
+    background: #c8bece;
+    fill: #c8bece;
 }
 
 .Jungle {
     color: white;
-    background: #1e361a
+    background: #1e361a;
+    fill: #1e361a;
 }
 
 .Hunter {
     color: white;
-    background: #1d2715
+    background: #1d2715;
+    fill: #1d2715;
 }
 
 .Forest {
     color: white;
-    background: #425035
+    background: #425035;
+    fill: #425035;
 }
 
 .Camo {
     color: white;
-    background: #51684c
+    background: #51684c;
+    fill: #51684c;
 }
 
 .Algae {
     color: black;
-    background: #97af8b
+    background: #97af8b;
+    fill: #97af8b;
 }
 
 .Swamp {
     color: white;
-    background: #687f67
+    background: #687f67;
+    fill: #687f67;
 }
 
 .Avocado {
     color: white;
-    background: #567c34
+    background: #567c34;
+    fill: #567c34;
 }
 
 .Green {
     color: white;
-    background: #629c3f
+    background: #629c3f;
+    fill: #629c3f;
 }
 
 .Fern {
     color: black;
-    background: #7ece73
+    background: #7ece73;
+    fill: #7ece73;
 }
 
 .Mantis {
     color: black;
-    background: #99ff9c
+    background: #99ff9c;
+    fill: #99ff9c;
 }
 
 .Silver {
     color: black;
-    background: #bbbabf
+    background: #bbbabf;
+    fill: #bbbabf;
 }
 
 .Pear {
     color: black;
-    background: #8ecd55
+    background: #8ecd55;
+    fill: #8ecd55;
 }
 
 .Leaf {
     color: black;
-    background: #a5e32d
+    background: #a5e32d;
+    fill: #a5e32d;
 }
 
 .Radioactive {
     color: black;
-    background: #c6ff00
+    background: #c6ff00;
+    fill: #c6ff00;
 }
 
 .Honeydew {
     color: black;
-    background: #d0e672
+    background: #d0e672;
+    fill: #d0e672;
 }
 
 .Peridot {
     color: black;
-    background: #e8ffb5
+    background: #e8ffb5;
+    fill: #e8ffb5;
 }
 
 .Chartreuse {
     color: black;
-    background: #b4cd3c
+    background: #b4cd3c;
+    fill: #b4cd3c;
 }
 
 .Spring {
     color: white;
-    background: #a9a832
+    background: #a9a832;
+    fill: #a9a832;
 }
 
 .Crocodile {
     color: white;
-    background: #828335
+    background: #828335;
+    fill: #828335;
 }
 
 .Olive {
     color: white;
-    background: #697135
+    background: #697135;
+    fill: #697135;
 }
 
 .Murk {
     color: white;
-    background: #4b4420
+    background: #4b4420;
+    fill: #4b4420;
 }
