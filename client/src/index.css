@@ -182,7 +182,7 @@ a:hover {
   margin: 1px;
 }
 
-.scheme-display-color-div:hover {
+.scheme-display-color-div:hover, .scheme-display-color-selected  {
   border: 1px solid cyan;
 }
 

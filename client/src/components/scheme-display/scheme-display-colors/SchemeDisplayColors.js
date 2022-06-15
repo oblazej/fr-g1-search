@@ -1,8 +1,10 @@
+import { useState } from "react";
 import SchemeDisplayColor from "../scheme-display-color/SchemeDisplayColor";
 
 function SchemeDisplayColors(props) {
+
     //use context?
-    const elements = props.colors.map((color) => <SchemeDisplayColor key={color} color={color} setPrev={props.setPrev}/>);
+    const elements = props.colors.map((color) => <SchemeDisplayColor key={color} color={color} setPrev={props.setPrev} recentColor={props.currentColor}/>);
 
     return (
         <>

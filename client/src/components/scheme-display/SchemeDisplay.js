@@ -5,6 +5,7 @@ import Axios from "axios";
 import elements from "../../constants/elements";
 import colors from "../../constants/colors";
 import SchemeDisplayColors from "./scheme-display-colors/SchemeDisplayColors";
+import SchemeDisplayElements from "./scheme-display-elements/SchemeDIsplayElements";
 import PreviewBox from "../preview-box/PreviewBox";
 import Loader from "../loader/Loader";
 
@@ -59,10 +60,11 @@ function SchemeDisplay() {
                 <div className="column">
                     <h2 className="scheme-name"><strong>{name}</strong> created by <strong>{creator}</strong></h2>
                     {isLoaded ? <>
-                        <SchemeDisplayColors title="primary colors:" colors={primaryColors} setPrev={setPreviewPrimary}/>
-                        <SchemeDisplayColors title="secondary colors:" colors={secondaryColors} setPrev={setPreviewSecondary}/>
-                        <SchemeDisplayColors title="tertiary colors:" colors={tertiaryColors} setPrev={setPreviewTertiary}/>
-                        {schemeElements}</> : <Loader />}
+                        <SchemeDisplayColors title="primary colors:" colors={primaryColors} setPrev={setPreviewPrimary} currentColor={previewPrimary}/>
+                        <SchemeDisplayColors title="secondary colors:" colors={secondaryColors} setPrev={setPreviewSecondary} currentColor={previewSecondary}/>
+                        <SchemeDisplayColors title="tertiary colors:" colors={tertiaryColors} setPrev={setPreviewTertiary} currentColor={previewTertiary}/>
+                        <SchemeDisplayElements title="elements:" elements={schemeElements} setPrev={setPreviewElement} />
+                        </> : <Loader />}
                 </div>
             </div>
         </motion.div>

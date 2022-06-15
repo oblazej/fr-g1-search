@@ -59,18 +59,18 @@ function DragonDisplay() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}>
-                           <h2 className="search-title"> <a href={`https://www1.flightrising.com/dragon/${id}`}>#{dragonID}</a></h2>
-                            <div className="flexit">
-                <PreviewBox primaryColor={primaryColor} secondaryColor={secondaryColor} tertiaryColor={tertiaryColor} element={element}/>
-            <div className="dragon-description">
-            <DragonDisplayColor color={primaryColor} description="primary color:"/>
-            <DragonDisplayColor color={secondaryColor} description="secondary color:"/>
-            <DragonDisplayColor color={tertiaryColor} description="tertiary color:"/>
-            <DragonDisplayText text={element} description="element:" />
-            <DragonDisplayText text={sex} description="sex:" />
-            <DragonDisplayText text={price} description="price:" />
-            <DragonDisplayText text={owner} description="owner:" />
-            </div>
+            <h2 className="search-title"> <a href={`https://www1.flightrising.com/dragon/${id}`}>#{dragonID}</a></h2>
+            <div className="flexit">
+                <PreviewBox primaryColor={primaryColor} secondaryColor={secondaryColor} tertiaryColor={tertiaryColor} element={element} />
+                <div className="dragon-description">
+                    <DragonDisplayColor color={primaryColor} description="primary color:" />
+                    <DragonDisplayColor color={secondaryColor} description="secondary color:" />
+                    <DragonDisplayColor color={tertiaryColor} description="tertiary color:" />
+                    <DragonDisplayText text={element} description="element:" />
+                    <DragonDisplayText text={sex} description="sex:" />
+                    <DragonDisplayText text={price} description="price:" />
+                    <DragonDisplayText text={owner} description="owner:" />
+                </div>
             </div>
         </motion.div>
     );

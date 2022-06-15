@@ -1,43 +1,54 @@
 .e-Earth {
+    background: #3f352c;
     fill: #3f352c;
 }
 
 .e-Plague {
+    background: #b60000;
     fill: #b60000;
 }
 
 .e-Wind {
+    background: #0fff9b;
     fill: #0fff9b;
 }
 
-.Water {
+.e-Water {
+    background: #0026ff;
     fill: #0026ff;
 }
 
 .e-Lightning {
+    background: #00f2ff;
     fill: #00f2ff;
 }
 
 .e-Ice {
+    background: #b0f2ff;
     fill: #b0f2ff;
 }
 
 .e-Shadow {
+    background: #7b00ff;
     fill: #7b00ff;
 }
 
 .e-Light {
-    fill: #fdff8c
+    background: #fdff8c;
+    fill: #fdff8c;
 }
 
 .e-Arcane {
-    fill: rgb(189, 5, 209);
+    background: #bd05d1;
+    fill: #bd05d1;
 }
 
 .e-Nature {
-    fill: rgb(2, 191, 24);
+    background: #02bf18;
+    fill: #02bf18;
 }
 
 .e-Fire {
-    fill: rgb(255, 183, 0);
+    background: #ffb700;
+    fill: #ffb700;
 }
