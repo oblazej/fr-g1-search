@@ -179,7 +179,6 @@ a:hover {
   min-width: 1rem;
   min-height: 1rem;
   border: 1px solid rgb(96, 41, 167);
-  margin: 1px;
 }
 
 .scheme-display-color-div:hover, .scheme-display-color-selected  {
@@ -220,6 +219,7 @@ strong {
 
 .scheme-display-color-container {
   position: relative;
+  margin: 1px;
 }
 
 .scheme-color-description {

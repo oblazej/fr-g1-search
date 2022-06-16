@@ -2,7 +2,7 @@ import SchemeDisplayElement from "../scheme-display-element/SchemeDisplayElement
 
 function SchemeDisplayElements(props) {
 
-    const elements = props.elements.map((element) => <SchemeDisplayElement key={element} element={element} setPrev={props.setPrev}/>);
+    const elements = props.elements.map((element) => <SchemeDisplayElement key={element} element={element} setPrev={props.setPrev} recentElement={props.recentElement} setRecentElement={props.setRecentElement}/>);
 
     return (
         <>

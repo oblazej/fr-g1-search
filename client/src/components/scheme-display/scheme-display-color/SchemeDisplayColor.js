@@ -13,22 +13,25 @@ function SchemeDisplayColor(props) {
 
       const handleMouseOut = () => {
             setIsHovering(false);
-            if(!isSelected) {
+            if (!isSelected) {
                   props.setPrev(recentColor);
             }
       }
 
       const handleOnClick = (e) => {
             setIsSelected(true);
-            e.target.classList.toggle("scheme-display-color-selected");
+            props.setPrev(props.color);
+            props.setRecentColor(props.color);
       }
 
-    return (
+      return (
             <div className="scheme-display-color-container">
-          <div className={[props.color, "scheme-display-color-div"].join(" ")} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={handleOnClick}></div>
-          {isHovering && <div className="scheme-color-description"><p>{props.color}</p></div>}
-          </div>
-    );
-  }
+                  {props.recentColor === props.color ?
+                        <div className={[props.color, "scheme-display-color-div", "scheme-display-color-selected"].join(" ")} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={handleOnClick}></div> :
+                        <div className={[props.color, "scheme-display-color-div"].join(" ")} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={handleOnClick}></div>}
+                  {isHovering && <div className="scheme-color-description"><p>{props.color}</p></div>}
+            </div>
+      );
+}
 
-  export default SchemeDisplayColor;
+export default SchemeDisplayColor;
