@@ -26,8 +26,8 @@ function SchemeDisplayElement(props) {
 
 
     return (
-            <div className="scheme-display-color-container">
-          {props.recentElement === props.element ? <div className={[`e-${props.element}`, "scheme-display-color-div", "scheme-display-color-selected"].join(" ")} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={handleOnClick}></div> : <div className={[`e-${props.element}`, "scheme-display-color-div"].join(" ")} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={handleOnClick}></div>}
+            <div className="scheme-display-color-container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={handleOnClick}>
+          {props.recentElement === props.element ? <div className={[`e-${props.element}`, "scheme-display-color-div", "scheme-display-color-selected"].join(" ")}></div> : <div className={[`e-${props.element}`, "scheme-display-color-div"].join(" ")}></div>}
           {isHovering && <div className="scheme-color-description"><p>{props.element}</p></div>}
           </div>
     );

@@ -219,7 +219,7 @@ strong {
 
 .scheme-display-color-container {
   position: relative;
-  margin: 1px;
+  padding: 1px;
 }
 
 .scheme-color-description {

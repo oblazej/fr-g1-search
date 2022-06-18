@@ -4,6 +4,7 @@ import SingleColorSelection from '../../components/single-color-selection/Single
 import ElementsSelection from '../elements-selection/ElementsSelection';
 import TextInput from '../../components/text-input/TextInput';
 import ColorRangeSelection from '../color-range-selection/ColorRangeSelection';
+import Notification from '../notification/Notification';
 import "./SearchForm.css";
 import Axios from "axios";
 
@@ -12,6 +13,8 @@ function SearchForm() {
     const selectedElements = useSelector((state) => state.selectedElements.value);
     const [schemeName, setSchemeName] = useState("");
     const [schemeCreator, setSchemeCreator] = useState("");
+    const [notificationText, setNotificationText] = useState("");
+    const [notificationVisibility, setNotificationVisibility] = useState(false);
 
     const sendReq = (e) => {    
         e.preventDefault();
@@ -25,8 +28,12 @@ function SearchForm() {
           secondaryRanges: selectedColors.secondaryRanges,
           tertiaryRanges: selectedColors.tertiaryRanges,
           elements: selectedElements
-        }).then(() => {
-            console.log("success")
+        }).then((response) => {
+            setNotificationText(response.data.success);
+            setNotificationVisibility(true);
+        })
+        .catch((err) => {
+            setNotificationText(err.response.data.message);
         })
     }
 
@@ -65,6 +72,7 @@ function SearchForm() {
             </div>
             <button className="search-submit">Load dragon preview</button>
             <button className="search-submit" onClick={sendReq}>Submit</button>
+            <Notification message={notificationText}/>
         </form>
     )
 }
