@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useSelector } from "react-redux";
+import { useRef, useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
 import SingleColorSelection from '../../components/single-color-selection/SingleColorSelection';
 import ElementsSelection from '../elements-selection/ElementsSelection';
 import TextInput from '../../components/text-input/TextInput';
@@ -7,14 +7,16 @@ import ColorRangeSelection from '../color-range-selection/ColorRangeSelection';
 import Notification from '../notification/Notification';
 import "./SearchForm.css";
 import Axios from "axios";
+import { resetColors } from '../../features/SelectedColors';
 
 function SearchForm() {
+    const notificationRef = useRef(null);
+    const dispatch = useDispatch();
     const selectedColors = useSelector((state) => state.selectedColors.value);
     const selectedElements = useSelector((state) => state.selectedElements.value);
     const [schemeName, setSchemeName] = useState("");
     const [schemeCreator, setSchemeCreator] = useState("");
     const [notificationText, setNotificationText] = useState("");
-    const [notificationVisibility, setNotificationVisibility] = useState(false);
 
     const sendReq = (e) => {    
         e.preventDefault();
@@ -30,10 +32,12 @@ function SearchForm() {
           elements: selectedElements
         }).then((response) => {
             setNotificationText(response.data.success);
-            setNotificationVisibility(true);
+            notificationRef.current.show();
+            dispatch(resetColors());
         })
         .catch((err) => {
             setNotificationText(err.response.data.message);
+            notificationRef.current.show();
         })
     }
 
@@ -72,7 +76,7 @@ function SearchForm() {
             </div>
             <button className="search-submit">Load dragon preview</button>
             <button className="search-submit" onClick={sendReq}>Submit</button>
-            <Notification message={notificationText}/>
+            <Notification ref={notificationRef} message={notificationText}/>
         </form>
     )
 }

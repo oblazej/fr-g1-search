@@ -20,9 +20,20 @@ export const colorsSlice = createSlice({
 
         deleteColor: (state, action) => {
             state.value[action.payload.colorOrder] = state.value[action.payload.colorOrder].filter((color) => color !== action.payload.color);
+        },
+
+        resetColors: (state, action) => {
+            state.value =  {
+                primaryColors: [], 
+                secondaryColors: [], 
+                tertiaryColors: [],
+                primaryRanges: [],
+                secondaryRanges: [],
+                tertiaryRanges: []
+            }
         }
     }
 });
 
-export const { addColor, deleteColor } = colorsSlice.actions;
+export const { addColor, deleteColor, resetColors } = colorsSlice.actions;
 export default colorsSlice.reducer;
