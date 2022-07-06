@@ -9,7 +9,7 @@ import "./SearchForm.css";
 import Axios from "axios";
 import { resetColors } from '../../features/SelectedColors';
 
-function SearchForm() {
+function SearchForm(props) {
     const notificationRef = useRef(null);
     const dispatch = useDispatch();
     const selectedColors = useSelector((state) => state.selectedColors.value);
@@ -17,6 +17,11 @@ function SearchForm() {
     const [schemeName, setSchemeName] = useState("");
     const [schemeCreator, setSchemeCreator] = useState("");
     const [notificationText, setNotificationText] = useState("");
+
+    const previewHandler = (e) => {
+        e.preventDefault();
+        props.previewHandler({primaryColor: "White", secondaryColor: "White", tertiaryColor: "White", element: "Fire"});
+    }
 
     const sendReq = (e) => {    
         e.preventDefault();
@@ -74,7 +79,7 @@ function SearchForm() {
                 <TextInput text="Name of the scheme" handler={setSchemeName}/>
                 <TextInput text="Your IGN" handler={setSchemeCreator}/>
             </div>
-            <button className="search-submit">Load dragon preview</button>
+            <button className="search-submit" onClick={previewHandler}>Load dragon preview</button>
             <button className="search-submit" onClick={sendReq}>Submit</button>
             <Notification ref={notificationRef} message={notificationText}/>
         </form>
